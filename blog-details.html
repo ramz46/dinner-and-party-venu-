@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <meta name="description" content="The Modern Rehearsal Dinner Guide: Etiquette, Timelines & Menu Inspiration — An in-depth guide by Event Director Genevieve Moreau.">
+  <title>The Modern Rehearsal Dinner Guide | The Rosewood Journal</title>
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/main.css?v=12">
+  <link rel="stylesheet" href="css/components.css?v=13">
+  <link rel="stylesheet" href="css/pages.css?v=14">
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('rosewood_theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+
+        var savedDir = localStorage.getItem('rosewood_direction') || 'ltr';
+        document.documentElement.setAttribute('dir', savedDir);
+        document.documentElement.setAttribute('lang', 'en');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo-monogram.svg" alt="Rosewood Logo" class="brand-monogram">
+        <div class="brand-words">
+          <span class="brand-name">The Rosewood</span>
+          <span class="brand-tagline">Glasshouse &amp; Atrium</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">
+            <span>Home</span>
+            <svg class="icon-caret" width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0h10L5 6z"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="index.html" class="dropdown-link">
+              <span class="dropdown-title">Estate Overview</span>
+              <span class="dropdown-desc">General venue overview</span>
+            </a>
+            <a href="home-celebrations.html" class="dropdown-link">
+              <span class="dropdown-title">Rehearsals &amp; Engagements</span>
+              <span class="dropdown-desc">Niche celebration focus &amp; timelines</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="spaces.html" class="nav-link">Spaces</a></div>
+        <div class="nav-item"><a href="services.html" class="nav-link">Services</a></div>
+        <div class="nav-item"><a href="packages.html" class="nav-link">Packages</a></div>
+        <div class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">Our Story</a></div>
+        <div class="nav-item"><a href="blog.html" class="nav-link is-active">Journal</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+        <div class="nav-item"><a href="dashboard.html" class="nav-link">Couple Portal</a></div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="rtl-pill" data-action="toggle-rtl"><span class="rtl-btn-text">RTL</span></button>
+        <button class="control-btn" data-action="toggle-theme" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="btn btn-primary btn-sm" data-open-modal="quick-tour">Book a Tour</button>
+        <button class="nav-toggle" data-action="toggle-menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <img src="assets/images/logo-monogram.svg" alt="Rosewood Monogram" width="36" height="36">
+        <span class="brand-name" style="font-size:1.2rem;">The Rosewood</span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">General Venue Home</a></li>
+      <li><a href="home-celebrations.html" class="mobile-nav-link">Rehearsals &amp; Engagements</a></li>
+      <li><a href="spaces.html" class="mobile-nav-link">Spaces &amp; Capacities</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="packages.html" class="mobile-nav-link">Celebration Packages</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link">Interactive Estimator</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="blog.html" class="mobile-nav-link text-gold">Etiquette &amp; Journal</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact &amp; Tours</a></li>
+      <li><a href="dashboard.html" class="mobile-nav-link">Client RSVP Dashboard</a></li>
+      <li><a href="admin.html" class="mobile-nav-link">Venue Admin Portal</a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-primary w-full" data-open-modal="quick-tour">Schedule Private Tasting</button>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.5rem;">
+        <span style="font-size:0.85rem; color:var(--text-muted);">Text Direction</span>
+        <button class="rtl-pill" data-action="toggle-rtl">
+          <span class="rtl-btn-text">RTL</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main-content" class="site-main">
+
+    <!-- Article Hero Banner -->
+    <section class="page-hero" aria-label="Article: The Modern Rehearsal Dinner Guide">
+      <div class="page-hero-bg">
+        <img src="assets/images/rehearsal-dinner-guide.jpg" alt="Intimate luxury rehearsal dinner celebration banquet inside the Rosewood Glasshouse Conservatory with champagne toasts and glowing candelabras" loading="eager">
+      </div>
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content reveal">
+        <nav class="page-hero-breadcrumb" aria-label="Breadcrumbs">
+          <a href="index.html">Home</a> &nbsp;/&nbsp; <a href="blog.html">Journal</a> &nbsp;/&nbsp; <span>Planning Tips</span>
+        </nav>
+        <div class="eyebrow">Etiquette &amp; Planning</div>
+        <h1>The Modern Rehearsal Dinner Guide: Etiquette, Timelines &amp; Menu Inspiration</h1>
+        <div class="floral-divider">
+          <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+        </div>
+        <div style="display:flex; justify-content:center; align-items:center; gap:var(--space-4); font-size:0.92rem; color:rgba(253, 251, 247, 0.85); margin-top:var(--space-4);">
+          <span>By <strong style="color:var(--accent-gold);">Genevieve Moreau</strong></span>
+          <span>&bull;</span>
+          <span>October 12, 2025</span>
+          <span>&bull;</span>
+          <span>6 Min Read</span>
+        </div>
+      </div>
+    </section>
+
+    <article class="section">
+      <div class="container">
+
+        <!-- Article 2-Column Layout -->
+        <div class="article-layout">
+
+          <!-- Main Text Column -->
+          <div class="article-content reveal">
+            <p class="lead-text">
+              Of all the events comprising a modern wedding weekend, the rehearsal dinner holds a uniquely tender position. It is the golden hour before the crescendo—the evening where two disparate family trees sit side by side, break artisanal bread, and share the stories that are simply too intimate for a 200-person ballroom.
+            </p>
+
+            <h2>Rule 1: The Guest List Dilemma</h2>
+            <p>
+              Historically, the rehearsal dinner was restricted strictly to the wedding party, their spouses, and the couple’s parents. In modern celebrations, however, couples are expanding this tradition into a warm welcome experience for out-of-town travelers.
+            </p>
+            <p>
+              If your budget or venue capacity is constrained, we recommend a two-part format: a private seated 3-course dinner for immediate bridal party members from 5:30 to 7:45 PM, followed by opening our Courtyard or Wine Lounge at 8:00 PM for all arriving guests to enjoy passed sparkling wine and sweet bites.
+            </p>
+
+            <div class="pull-quote">
+              “The most memorable rehearsal dinners are not about performance; they are about presence. Give your guests space to exhale before the adrenaline of the wedding day.”
+            </div>
+
+            <h2>Rule 2: The Art of the Speech Order</h2>
+            <p>
+              One of the greatest benefits of the rehearsal dinner is speech freedom. Unlike the wedding reception, where speeches must be rigorously timed to keep the dance floor moving, the rehearsal dinner welcomes meandering, heartfelt storytelling.
+            </p>
+            <ul>
+              <li><strong>The Welcome:</strong> The hosts (traditionally the groom's parents or the couple) open the evening as first courses are poured.</li>
+              <li><strong>The Course Breaks:</strong> Space speeches between plates. Hear from childhood best friends after the pasta course, and college roommates before dessert.</li>
+              <li><strong>The Open Mic:</strong> Keep an optional 15-minute open-floor window during digestifs for unexpected, impromptu family toasts.</li>
+            </ul>
+
+            <!-- Cocktail / Recipe Feature Highlight Box -->
+            <div class="recipe-highlight-box">
+              <div style="margin-bottom:var(--space-4); border-radius:var(--radius-md); overflow:hidden; border:1px solid rgba(223, 194, 147, 0.35); box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+                <img src="assets/images/bespoke-cocktail-menu.jpg" alt="The Rosewood Smoked Rosemary Old Fashioned with torched rosemary and crystal ice block" style="width:100%; height:260px; object-fit:cover;" loading="lazy">
+              </div>
+              <div class="eyebrow-no-line eyebrow" style="color:var(--accent-gold); font-size:0.75rem;">Signature Celebration Cocktail</div>
+              <h3 style="margin-top:0.25rem; margin-bottom:0.75rem;">The Rosewood Smoked Rosemary Old Fashioned</h3>
+              <p style="font-size:0.925rem; margin-bottom:1rem;">
+                Crafted by Master Sommelier Antoine Laurent for autumn rehearsal evenings in our Cellar Lounge:
+              </p>
+              <ul style="font-size:0.875rem; line-height:1.8; color:var(--text-secondary); margin-bottom:1rem;">
+                <li>&bull; 2 oz Hudson Valley Rye Whiskey</li>
+                <li>&bull; 0.5 oz House-made Organic Fig &amp; Thyme Demerara Syrup</li>
+                <li>&bull; 2 Dashes Black Walnut Bitters</li>
+                <li>&bull; Torched fresh estate rosemary sprig &amp; hand-stamped crystal ice block</li>
+              </ul>
+              <div style="font-size:0.8rem; font-style:italic; color:var(--text-muted);">
+                *Included in all Golden Hour &amp; Grand Gala bar packages.
+              </div>
+            </div>
+
+            <h2>Rule 3: Gifting and Run-of-Show Alignment</h2>
+            <p>
+              Use the final hour of your rehearsal dinner to present personalized thank-you gifts to your maid of honor, best man, bridesmaids, groomsmen, and parents. Doing this privately prevents wedding-day logistical clutter and creates an unforgettable, tearful memory that honors your closest confidants.
+            </p>
+
+            <hr style="margin-block:var(--space-8); border:0; border-top:1px solid var(--border-color);">
+
+            <!-- Comments Section -->
+            <section style="margin-top:var(--space-10);">
+              <h3>Reader Thoughts &amp; Questions (2)</h3>
+              
+              <div style="margin-top:var(--space-6); display:flex; flex-direction:column; gap:var(--space-4);">
+                <div style="background:var(--bg-surface); border:1px solid var(--border-color); padding:var(--space-4); border-radius:var(--radius-md);">
+                  <div style="display:flex; justify-content:space-between; margin-bottom:0.35rem;">
+                    <strong>Jessica Vance</strong>
+                    <span style="font-size:0.8rem; color:var(--text-muted);">October 14, 2025</span>
+                  </div>
+                  <p style="font-size:0.9rem; margin:0;">
+                    The suggestion to separate the intimate seated dinner from the broader welcome cocktail hour was a lifesaver for our Hudson Valley rehearsal! Thank you Genevieve!
+                  </p>
+                </div>
+
+                <div style="background:var(--bg-surface); border:1px solid var(--border-color); padding:var(--space-4); border-radius:var(--radius-md);">
+                  <div style="display:flex; justify-content:space-between; margin-bottom:0.35rem;">
+                    <strong>Marcus Sterling</strong>
+                    <span style="font-size:0.8rem; color:var(--text-muted);">October 16, 2025</span>
+                  </div>
+                  <p style="font-size:0.9rem; margin:0;">
+                    That smoked rosemary old fashioned recipe sounds sensational. Can't wait to taste it at our walkthrough next month.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Comment Form -->
+              <div style="margin-top:var(--space-8); background:var(--bg-surface-warm); padding:var(--space-6); border-radius:var(--radius-lg); border:1px solid var(--border-color);">
+                <h4>Leave a Comment or Question</h4>
+                <form id="comment-form" onsubmit="event.preventDefault(); window.showToast('Thank you! Your comment has been posted to the journal.', 'success'); this.reset();" style="margin-top:var(--space-4);">
+                  <div class="form-group">
+                    <label class="form-label">Your Name</label>
+                    <input type="text" class="form-control" required placeholder="e.g. Jessica V.">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Your Comment</label>
+                    <textarea class="form-textarea" rows="3" required placeholder="Share your wedding planning insight..."></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-sm">Post Comment</button>
+                </form>
+              </div>
+            </section>
+          </div>
+
+          <!-- Sidebar Column -->
+          <aside class="sidebar-column reveal delay-100">
+
+            <!-- Author Card -->
+            <div class="sidebar-widget text-center">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="Genevieve Moreau" style="width:90px; height:90px; border-radius:50%; object-fit:cover; margin:0 auto var(--space-3); border:2px solid var(--accent-gold);">
+              <h4 style="margin-bottom:0.25rem;">Genevieve Moreau</h4>
+              <div style="font-size:0.75rem; text-transform:uppercase; color:var(--accent-rose); font-weight:700; margin-bottom:0.75rem;">Head Event Director</div>
+              <p style="font-size:0.85rem; line-height:1.5;">Genevieve has directed over 250 bespoke rehearsal dinners and private celebrations across New York and Paris.</p>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="sidebar-widget">
+              <h4 style="margin-bottom:var(--space-4); padding-bottom:var(--space-2); border-bottom:1px solid var(--border-color);">Related Stories</h4>
+              
+              <div style="display:flex; flex-direction:column; gap:var(--space-4);">
+                <div>
+                  <a href="blog-details.html" style="font-weight:600; font-size:0.95rem; line-height:1.3; display:block;">How to Design a Bespoke Signature Cocktail Menu</a>
+                  <span style="font-size:0.75rem; color:var(--text-muted);">5 min read · Food &amp; Wine</span>
+                </div>
+                <div>
+                  <a href="blog-details.html" style="font-weight:600; font-size:0.95rem; line-height:1.3; display:block;">Seated Dinner vs. Cocktail Reception Flow</a>
+                  <span style="font-size:0.75rem; color:var(--text-muted);">7 min read · Design &amp; Spaces</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Schedule Walkthrough Widget -->
+            <div class="sidebar-widget" style="background:var(--accent-plum); color:var(--text-light); text-align:center;">
+              <h4 style="color:#FFF; margin-bottom:0.5rem;">Planning Your Rehearsal?</h4>
+              <p style="color:rgba(255,255,255,0.8); font-size:0.85rem; margin-bottom:1.25rem;">Meet Genevieve and Chef Julien for a private estate tour and wine pairing preview.</p>
+              <button class="btn btn-secondary btn-sm w-full" data-open-modal="quick-tour">Book Private Tour</button>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </article>
+
+  </main>  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo" style="color:#FFF;">
+            <img src="assets/images/logo-monogram.svg" alt="Rosewood Logo" width="40" height="40">
+            <div class="brand-words">
+              <span class="brand-name" style="color:#FFF;">The Rosewood</span>
+              <span class="brand-tagline" style="color:var(--accent-gold);">Glasshouse &amp; Atrium</span>
+            </div>
+          </a>
+          <p class="footer-brand-p">
+            An intimate estate venue dedicated to romantic rehearsal dinners, engagement soirées, and elevated private dining celebrations.
+          </p>
+          <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:0.35rem; font-size:0.85rem; color:rgba(255,255,255,0.7);">
+            <span>428 Rosewood Estate Lane, Hudson Valley, NY 12572</span>
+            <span>Direct Concierge: +1 (845) 555-0194</span>
+          </div>
+        </div>
+
+        <div>
+          <h4>Spaces &amp; Dining</h4>
+          <ul class="footer-nav-list">
+            <li><a href="spaces.html#glasshouse-conservatory">The Glasshouse Conservatory</a></li>
+            <li><a href="spaces.html#cellar-lounge">Rosewood Cellar &amp; Lounge</a></li>
+            <li><a href="spaces.html#veranda-courtyard">Veranda &amp; Walled Courtyard</a></li>
+            <li><a href="spaces.html#grand-solarium">Grand Solarium Dining Hall</a></li>
+            <li><a href="service-details.html">Chef Tasting Menus</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Couple Resources</h4>
+          <ul class="footer-nav-list">
+            <li><a href="home-celebrations.html">Rehearsal Dinners Guide</a></li>
+            <li><a href="packages.html">Celebration Packages</a></li>
+            <li><a href="pricing.html">Cost Estimator</a></li>
+            <li><a href="dashboard.html">Client Couple Portal</a></li>
+            <li><a href="admin.html">Venue Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>The Seasonal Journal</h4>
+          <p>Receive private invitations, seasonal menu previews, and rehearsal dinner etiquette notes.</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email Address">
+            <button type="submit" class="btn btn-secondary btn-sm">Join</button>
+          </form>
+          <div class="social-links" style="margin-top:1.5rem;">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link social-instagram" aria-label="Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link social-x" aria-label="X (formerly Twitter)" title="X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link social-facebook" aria-label="Facebook" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 The Rosewood Glasshouse &amp; Atrium. All rights reserved.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms of Booking</a>
+          <a href="contact.html">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick Tour Modal -->
+  <div class="modal-backdrop" id="quick-tour-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" data-close-modal>&times;</button>
+      <div class="eyebrow" style="color:var(--accent-rose);">Private Tour</div>
+      <h3>Schedule Your Estate Visit</h3>
+      <form id="quick-tour-form" novalidate style="margin-top:1.5rem;">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-control" required placeholder="Your name" pattern="^[A-Za-z\s\.'\,\-&]+$" title="Names must contain letters only (no numbers)">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" class="form-control" required placeholder="email@domain.com">
+        </div>
+        <button type="submit" class="btn btn-primary w-full">Request Private Tour</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/data.js?v=11"></script>
+  <!-- Animation Engines -->
+  <script src="js/gsap.min.js?v=1"></script>
+  <script src="js/ScrollTrigger.min.js?v=1"></script>
+  <script src="js/main.js?v=18"></script>
+  <script src="js/forms.js?v=12"></script>
+</body>
+</html>

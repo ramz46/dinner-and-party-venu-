@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 24" width="240" height="24" fill="none">
+  <path d="M0 12 H95" stroke="#C8A265" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+  <path d="M145 12 H240" stroke="#C8A265" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+  <!-- Central rosette & leaves -->
+  <circle cx="120" cy="12" r="3" fill="#C8A265"/>
+  <path d="M112 12 C115 9, 117 9, 120 12 C117 15, 115 15, 112 12 Z" fill="#C48292" opacity="0.8"/>
+  <path d="M128 12 C125 9, 123 9, 120 12 C123 15, 125 15, 128 12 Z" fill="#C48292" opacity="0.8"/>
+  <circle cx="103" cy="12" r="1.5" fill="#C8A265"/>
+  <circle cx="137" cy="12" r="1.5" fill="#C8A265"/>
+</svg>

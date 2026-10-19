@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <meta name="description" content="The Rosewood Glasshouse & Atrium — An intimate estate venue for romantic rehearsal dinners, engagement parties, and private dining celebrations in the Hudson Valley.">
+  <meta name="keywords" content="rehearsal dinner venue, engagement party venue, intimate wedding venue, glasshouse conservatory, private dining, hudson valley estate">
+  <title>The Rosewood Glasshouse & Atrium | Rehearsal Dinners & Engagement Celebrations</title>
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css?v=12">
+  <link rel="stylesheet" href="css/components.css?v=13">
+  <link rel="stylesheet" href="css/pages.css?v=14">
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('rosewood_theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+
+        var savedDir = localStorage.getItem('rosewood_direction') || 'ltr';
+        document.documentElement.setAttribute('dir', savedDir);
+        document.documentElement.setAttribute('lang', 'en');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <a href="index.html" class="brand-logo" aria-label="The Rosewood Glasshouse & Atrium Home">
+        <img src="assets/images/logo-monogram.svg" alt="Rosewood Monogram" class="brand-monogram">
+        <div class="brand-words">
+          <span class="brand-name">The Rosewood</span>
+          <span class="brand-tagline">Glasshouse &amp; Atrium</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link is-active">
+            <span>Home</span>
+            <svg class="icon-caret" width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0h10L5 6z"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="index.html" class="dropdown-link">
+              <span class="dropdown-title">Estate Overview</span>
+              <span class="dropdown-desc">Signature spaces, gallery &amp; dining</span>
+            </a>
+            <a href="home-celebrations.html" class="dropdown-link">
+              <span class="dropdown-title">Rehearsals &amp; Engagements</span>
+              <span class="dropdown-desc">Niche celebration timelines &amp; packages</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="spaces.html" class="nav-link">Spaces</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">Services</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="packages.html" class="nav-link">Packages</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="pricing.html" class="nav-link">Pricing</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="about.html" class="nav-link">Our Story</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="blog.html" class="nav-link">Journal</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="dashboard.html" class="nav-link">Couple Portal</a>
+        </div>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="header-actions">
+        <!-- RTL Toggle -->
+        <button class="rtl-pill" data-action="toggle-rtl" aria-label="Toggle text direction RTL or LTR">
+          <span class="rtl-btn-text">RTL</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="control-btn" data-action="toggle-theme" aria-label="Toggle dark or light theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <!-- CTA Button -->
+        <button class="btn btn-primary btn-sm" data-open-modal="quick-tour">
+          <span>Book a Tour</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="nav-toggle" data-action="toggle-menu" aria-label="Open mobile navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <img src="assets/images/logo-monogram.svg" alt="Rosewood Monogram" width="36" height="36">
+        <span class="brand-name" style="font-size:1.2rem;">The Rosewood</span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link text-gold">General Venue Home</a></li>
+      <li><a href="home-celebrations.html" class="mobile-nav-link">Rehearsals &amp; Engagements</a></li>
+      <li><a href="spaces.html" class="mobile-nav-link">Spaces &amp; Capacities</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="packages.html" class="mobile-nav-link">Celebration Packages</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link">Interactive Estimator</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Etiquette &amp; Journal</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact &amp; Tours</a></li>
+      <li><a href="dashboard.html" class="mobile-nav-link">Client RSVP Dashboard</a></li>
+      <li><a href="admin.html" class="mobile-nav-link">Venue Admin Portal</a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-primary w-full" data-open-modal="quick-tour">Schedule Private Tasting</button>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.5rem;">
+        <span style="font-size:0.85rem; color:var(--text-muted);">Text Direction</span>
+        <button class="rtl-pill" data-action="toggle-rtl">
+          <span class="rtl-btn-text">RTL</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main id="main-content" class="site-main">
+
+    <!-- 1. Hero Section -->
+    <section class="hero-general" aria-label="Venue Introduction">
+      <!-- Ambient Lights and Floating Orbs -->
+      <div class="hero-ambient-lights" aria-hidden="true">
+        <div class="hero-orb hero-orb-gold"></div>
+        <div class="hero-orb hero-orb-rose"></div>
+        <div class="hero-orb hero-orb-plum"></div>
+        <canvas class="hero-particles" id="hero-particles"></canvas>
+      </div>
+
+      <div class="hero-bg-media">
+        <img id="hero-parallax-img" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1920&q=80" alt="The Rosewood Glasshouse Conservatory bathed in evening candlelight">
+      </div>
+      <div class="hero-overlay"></div>
+      
+      <div class="container relative">
+        <div class="hero-content">
+          <!-- Animated Eyebrow Pill -->
+          <div class="hero-eyebrow-pill">
+            <span class="sparkle-icon">✦</span>
+            <span>Hudson Valley Estate &amp; Private Conservatory</span>
+            <span class="sparkle-icon">✦</span>
+          </div>
+
+          <!-- Staggered Headline -->
+          <h1 class="hero-title">
+            <span class="hero-title-line">Where Unforgettable Celebrations</span>
+            <span class="hero-title-line font-serif-italic text-gold-gradient">Begin Before the Aisle</span>
+          </h1>
+
+          <!-- Lead Paragraph -->
+          <p class="hero-lead-text">
+            An intimate glass conservatory, candlelit limestone courtyards, and artisanal culinary experiences designed exclusively for cherished rehearsal dinners, engagement soirées, and private wedding party banquets.
+          </p>
+
+          <!-- Animated Magnetic CTA Group -->
+          <div class="hero-cta-group">
+            <button class="btn btn-secondary btn-lg btn-magnetic btn-glow" data-open-modal="quick-tour">
+              <span class="btn-shine"></span>
+              <span>Book a Private Tour</span>
+              <svg class="btn-icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <a href="spaces.html" class="btn btn-outline-light btn-lg btn-magnetic">
+              <span class="btn-shine"></span>
+              <span>Explore Our Spaces</span>
+            </a>
+          </div>
+
+          <!-- Animated Counter Stats Shelf -->
+          <div class="hero-stats-bar">
+            <div class="hero-stat-item">
+              <span class="stat-number"><span data-count-target="25">0</span> – <span data-count-target="180">0</span></span>
+              <span class="stat-label">Intimate Guest Capacity</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="stat-number"><span data-count-target="4">0</span> Distinct</span>
+              <span class="stat-label">Bespoke Architectural Spaces</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="stat-number">100% Exclusivity</span>
+              <span class="stat-label">One Evening Celebration Only</span>
+            </div>
+          </div>
+
+          <!-- Interactive Lighting Atmosphere Selector -->
+          <div class="text-center" style="margin-top:var(--space-6);">
+            <div style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.14em; color:rgba(253, 251, 247, 0.72); margin-bottom:0.45rem; font-weight:700;">
+              ✦ Live Estate Lighting Simulation ✦
+            </div>
+            <div class="hero-mood-bar" role="group" aria-label="Simulate Estate Lighting Atmosphere">
+              <button type="button" class="mood-btn" data-hero-mood="golden" aria-label="Switch to Golden Hour Sunset Ambiance">
+                <span>🌅 Golden Hour</span>
+              </button>
+              <button type="button" class="mood-btn is-active" data-hero-mood="candlelight" aria-label="Switch to Candlelit Gala Ambiance">
+                <span>🕯️ Candlelight Gala</span>
+              </button>
+              <button type="button" class="mood-btn" data-hero-mood="starlight" aria-label="Switch to Starlight Speakeasy Ambiance">
+                <span>✨ Starlight After-Hours</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Venue Introduction / Editorial Story -->
+    <section class="section section-warm" id="experience-section">
+      <div class="container">
+        <div class="section-header reveal reveal-scale">
+          <div class="eyebrow">The Rosewood Experience</div>
+          <h2>Crafted for Life’s Most Intimate Prelude</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+          <p>
+            Your rehearsal dinner and engagement party should never feel like an afterthought. At The Rosewood, we dedicate our entire grounds to intimate celebrations where families unite, heartfelt toasts echo without rush, and exceptional hospitality takes center stage.
+          </p>
+        </div>
+
+        <div class="grid grid-3 stagger-children">
+          <div class="feature-box reveal">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3>Sole Event Exclusivity</h3>
+            <p>We host only one celebration per evening. The entire glasshouse, walled gardens, and wine lounge are exclusively yours with zero distractions.</p>
+          </div>
+
+          <div class="feature-box reveal">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <h3>Chef-Driven Banquets</h3>
+            <p>From family-style pasta feasts to 5-course seasonal pairings, our menus feature organic produce from Hudson Valley growers paired with rare reserve vintages.</p>
+          </div>
+
+          <div class="feature-box reveal">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h3>Seamless Coordination</h3>
+            <p>Our dedicated rehearsal concierge coordinates audio for speeches, manages custom menu placecards, arranges photo moments, and oversees timeline flow.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.5 Interactive Evening Timeline Experience -->
+    <section class="section section-base" id="evening-flow" aria-label="Interactive Evening Celebration Timeline">
+      <div class="container">
+        <div class="section-header reveal reveal-scale">
+          <div class="eyebrow">The Flow of the Night</div>
+          <h2>How an Unhurried Evening Unfolds</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+          <p>Click through the timeline milestones to preview the atmosphere, culinary pace, and acoustic energy of your celebration.</p>
+        </div>
+
+        <!-- Interactive Stepper Milestones -->
+        <div class="timeline-stepper horizontal-stepper timeline-stepper-horizontal reveal" role="tablist" aria-label="Celebration Milestones" style="display:flex; flex-direction:row; justify-content:space-between; align-items:flex-start; max-width:880px; margin-inline:auto; width:100%;">
+          <button type="button" class="timeline-step-btn is-active" data-timeline-step="step-1" role="tab" aria-selected="true" aria-controls="timeline-display-card">
+            <span class="step-node">🍸</span>
+            <span class="step-time">5:30 PM</span>
+            <span class="step-label">Arrival &amp; Spritz</span>
+          </button>
+          <button type="button" class="timeline-step-btn" data-timeline-step="step-2" role="tab" aria-selected="false" aria-controls="timeline-display-card">
+            <span class="step-node">🕯️</span>
+            <span class="step-time">6:45 PM</span>
+            <span class="step-label">Seated Banquet</span>
+          </button>
+          <button type="button" class="timeline-step-btn" data-timeline-step="step-3" role="tab" aria-selected="false" aria-controls="timeline-display-card">
+            <span class="step-node">🥂</span>
+            <span class="step-time">8:15 PM</span>
+            <span class="step-label">Speeches &amp; Toasts</span>
+          </button>
+          <button type="button" class="timeline-step-btn" data-timeline-step="step-4" role="tab" aria-selected="false" aria-controls="timeline-display-card">
+            <span class="step-node">🎷</span>
+            <span class="step-time">9:30 PM</span>
+            <span class="step-label">Cellar Speakeasy</span>
+          </button>
+        </div>
+
+        <!-- Interactive Display Card with Crossfade -->
+        <div class="timeline-display-card reveal" id="timeline-display-card">
+          <div class="timeline-card-media">
+            <img id="timeline-img" src="assets/images/veranda-champagne-welcome.jpg" alt="Guests enjoying chilled champagne flutes in the walled veranda courtyard" onerror="this.onerror=null;this.src='assets/images/champagne-welcome.jpg'">
+          </div>
+          <div class="timeline-card-body">
+            <div class="timeline-card-time-badge" id="timeline-time-badge">5:30 PM · The Arrival &amp; Apertif</div>
+            <h3 id="timeline-title">Walled Veranda &amp; Courtyard Champagne Welcome</h3>
+            <p id="timeline-desc" style="color:var(--text-secondary); line-height:1.65; margin-top:var(--space-2);">
+              Guests arrive along the lantern-lit cobblestone path. Greeted with flutes of chilled Blanc de Blancs, botanical spritzes, and passed artisanal tartlets as acoustic guitar plays under the pergolas.
+            </p>
+            <div class="timeline-vibe-pill" id="timeline-vibe">
+              🎷 Ambiance: Live French Gypsy Jazz &amp; Garden Breezes
+            </div>
+            <div style="margin-top:var(--space-6); display:flex; gap:var(--space-4); align-items:center; flex-wrap:wrap;">
+              <button class="btn btn-primary btn-sm btn-magnetic" data-open-modal="quick-tour">Inquire for This Timeline</button>
+              <a href="packages.html" class="btn-arrow text-gold" style="font-weight:600; font-size:0.875rem;">
+                <span>View Full Itineraries &rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Featured Spaces Preview -->
+    <section class="section" id="spaces-preview">
+      <div class="container">
+        <div class="section-header reveal reveal-scale">
+          <div class="eyebrow">Architectural Sanctuaries</div>
+          <h2>Atmospheric Settings for Every Occasion</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+          <p>Whether you dream of a sunlit champagne toast under iron-framed glass arches or a moody, candlelit dinner in an underground wine cellar, explore our signature spaces.</p>
+        </div>
+
+        <div class="grid grid-2 stagger-children">
+          <!-- Space 1 -->
+          <article class="card card-space reveal">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="The Glasshouse Conservatory">
+              <span class="card-badge">Signature Conservatory</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">The Glasshouse Conservatory</h3>
+              <p>Climatically controlled glass arches beneath an antique glass cupola, enveloped by lush indoor citrus trees and hanging jasmine.</p>
+              <div class="card-meta-list">
+                <div class="card-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <span>Up to 85 Seated (120 Cocktail)</span>
+                </div>
+                <div class="card-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+                  <span>2,400 Sq. Ft.</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <span class="font-serif" style="font-size:1.1rem; color:var(--accent-plum); font-weight:600;">From $4,200</span>
+                <a href="spaces.html#glasshouse-conservatory" class="btn btn-outline btn-sm btn-arrow btn-magnetic">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Space 2 -->
+          <article class="card card-space reveal">
+            <div class="card-media">
+              <img src="assets/images/rosewood-cellar-lounge.jpg" alt="The Rosewood Cellar &amp; Tasting Lounge" loading="lazy">
+              <span class="card-badge">Intimate &amp; Moody</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">The Rosewood Cellar &amp; Lounge</h3>
+              <p>Exposed 19th-century brickwork, vaulted timber arches, and custom velvet banquettes surrounding an illuminated rare vintage wine vault.</p>
+              <div class="card-meta-list">
+                <div class="card-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                  <span>Up to 36 Seated (50 Cocktail)</span>
+                </div>
+                <div class="card-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+                  <span>1,200 Sq. Ft.</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <span class="font-serif" style="font-size:1.1rem; color:var(--accent-plum); font-weight:600;">From $2,800</span>
+                <a href="spaces.html#cellar-lounge" class="btn btn-outline btn-sm btn-arrow btn-magnetic">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Space 3: The Veranda & Walled Courtyard -->
+          <article class="card card-space reveal">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80" alt="The Veranda &amp; Walled Courtyard illuminated under evening lanterns">
+              <span class="card-badge">Alfresco &amp; Gardens</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">The Veranda &amp; Walled Courtyard</h3>
+              <p>Hand-carved limestone pillars, weeping wisteria pergolas, and lantern-lit stone fountains for open-air champagne welcomes.</p>
+              <div class="card-meta-list">
+                <div class="card-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <span>Up to 110 Seated (160 Cocktail)</span>
+                </div>
+                <div class="card-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+                  <span>3,100 Sq. Ft.</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <span class="font-serif" style="font-size:1.1rem; color:var(--accent-plum); font-weight:600;">From $4,800</span>
+                <a href="spaces.html#veranda-courtyard" class="btn btn-outline btn-sm btn-arrow btn-magnetic">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Space 4: The Grand Solarium & Dining Hall -->
+          <article class="card card-space reveal">
+            <div class="card-media">
+              <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="The Grand Solarium &amp; Dining Hall with arched transoms, parquet floors, and crystal chandeliers">
+              <span class="card-badge">Grand Celebrations</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">The Grand Solarium &amp; Dining Hall</h3>
+              <p>Grand arched transoms, herringbone parquet floors, and panoramic views of the manicured estate orchards for grand banquets.</p>
+              <div class="card-meta-list">
+                <div class="card-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <span>Up to 150 Seated (220 Cocktail)</span>
+                </div>
+                <div class="card-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+                  <span>4,200 Sq. Ft.</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <span class="font-serif" style="font-size:1.1rem; color:var(--accent-plum); font-weight:600;">From $6,500</span>
+                <a href="spaces.html#grand-solarium" class="btn btn-outline btn-sm btn-arrow btn-magnetic">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center" style="margin-top:var(--space-10);">
+          <a href="spaces.html" class="btn btn-secondary btn-magnetic btn-glow">
+            <span class="btn-shine"></span>
+            <span>Explore All 4 Spaces &amp; Capacities &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Curated Services Teaser -->
+    <section class="section section-rose">
+      <div class="container">
+        <div class="section-header reveal reveal-scale">
+          <div class="eyebrow">End-to-End Elegance</div>
+          <h2>Signature Celebratory Services</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+          <p>Everything you need for an effortless rehearsal dinner or engagement party under one refined roof.</p>
+        </div>
+
+        <div class="grid grid-3 stagger-children">
+          <div class="card reveal" style="padding:var(--space-6);">
+            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=600&q=80" alt="Bespoke Culinary Catering" class="rounded-lg" style="aspect-ratio:16/10; object-fit:cover; margin-bottom:var(--space-4);">
+            <h4>Bespoke Dining &amp; Pairings</h4>
+            <p style="font-size:0.9rem;">From passed artisanal canapés to 5-course plated tasting menus curated alongside our head sommelier.</p>
+            <a href="service-details.html" class="btn-arrow text-gold" style="font-weight:600; font-size:0.875rem; display:inline-flex; align-items:center; gap:4px;">
+              <span>Explore Menus</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+
+          <div class="card reveal" style="padding:var(--space-6);">
+            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80" alt="Floral &amp; Tablescape Design with Antique Brass Tapers" class="rounded-lg" style="aspect-ratio:16/10; object-fit:cover; margin-bottom:var(--space-4);">
+            <h4>Floral &amp; Tablescape Design</h4>
+            <p style="font-size:0.9rem;">Fine linen runners, antique brass taper holders, botanical floral runners, and bespoke handwritten calligraphy.</p>
+            <a href="services.html" class="btn-arrow text-gold" style="font-weight:600; font-size:0.875rem; display:inline-flex; align-items:center; gap:4px;">
+              <span>Explore Styling</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+
+          <div class="card reveal" style="padding:var(--space-6);">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" alt="Speech &amp; Acoustic Audio with Live Jazz Under Warm Illumination" class="rounded-lg" style="aspect-ratio:16/10; object-fit:cover; margin-bottom:var(--space-4);">
+            <h4>Speech Audio &amp; Ambience</h4>
+            <p style="font-size:0.9rem;">Crystal-clear wireless microphones for heartfelt toasts, subtle acoustic jazz amplification, and warm dimmable illumination.</p>
+            <a href="services.html" class="btn-arrow text-gold" style="font-weight:600; font-size:0.875rem; display:inline-flex; align-items:center; gap:4px;">
+              <span>Audio Details</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.5 Interactive Chef's Tasting Showcase -->
+    <section class="section section-surface" id="tasting-experience">
+      <div class="container">
+        <div class="section-header reveal reveal-scale">
+          <div class="eyebrow">A Feast for the Senses</div>
+          <h2>Bespoke Seasonal Tasting Experience</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+          <p>Every rehearsal dinner menu is customized alongside our executive chef, pairing estate-grown produce with vintage cellar selections.</p>
+        </div>
+
+        <div class="tasting-course-grid stagger-children">
+          <!-- Course I -->
+          <div class="tasting-course-card reveal">
+            <div class="tasting-media">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Black Summer Truffle Agnolotti" loading="lazy">
+              <span class="tasting-course-badge">Course I · Primi</span>
+            </div>
+            <div class="tasting-body">
+              <h4>Handmade Truffle Agnolotti</h4>
+              <p style="font-size:0.9rem; color:var(--text-secondary);">Brown butter emulsion, crispy sage, 24-month Parmigiano-Reggiano, and freshly shaved Norcia black truffles.</p>
+              <div class="tasting-pairing">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 22h8M12 15v7M17 2H7l2 11a3 3 0 0 0 6 0l2-11z"/></svg>
+                <span>Pairing: 2021 Chablis Grand Cru, Domaine Laroche</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course II -->
+          <div class="tasting-course-card reveal">
+            <div class="tasting-media">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Hudson Valley Duck Breast" loading="lazy">
+              <span class="tasting-course-badge">Course II · Main</span>
+            </div>
+            <div class="tasting-body">
+              <h4>Dry-Aged Hudson Valley Duck Breast</h4>
+              <p style="font-size:0.9rem; color:var(--text-secondary);">Lavender blossom glaze, parsnip purée, caramelized mission figs, and estate red currant reduction.</p>
+              <div class="tasting-pairing">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 22h8M12 15v7M17 2H7l2 11a3 3 0 0 0 6 0l2-11z"/></svg>
+                <span>Pairing: 2018 Barolo Monprivato, Giuseppe Mascarello</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course III -->
+          <div class="tasting-course-card reveal">
+            <div class="tasting-media">
+              <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=80" alt="Meyer Lemon Verbena Tartlet" loading="lazy">
+              <span class="tasting-course-badge">Course III · Dolce</span>
+            </div>
+            <div class="tasting-body">
+              <h4>Meyer Lemon &amp; Verbena Tartlet</h4>
+              <p style="font-size:0.9rem; color:var(--text-secondary);">Orangery citrus curd, torched Swiss meringue crown, candied pistachios, and fresh verbena oil.</p>
+              <div class="tasting-pairing">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 22h8M12 15v7M17 2H7l2 11a3 3 0 0 0 6 0l2-11z"/></svg>
+                <span>Pairing: 2020 Château d'Yquem Premier Cru Sauternes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top:var(--space-10);">
+          <a href="service-details.html" class="btn btn-outline btn-magnetic">
+            <span>Explore Custom Tasting Menus &amp; Wine Lists &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal reveal-scale">
+          <div class="eyebrow">Kind Words</div>
+          <h2>Cherished Memories from Our Couples</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+        </div>
+
+        <div class="grid grid-3 stagger-children">
+          <div class="card-testimonial reveal">
+            <div>
+              <div class="star-rating">★★★★★</div>
+              <p class="testimonial-quote">“The Glasshouse Conservatory transformed our rehearsal dinner into a fairytale. The candlelight reflecting in the glass arches and the tender braised beef allowed our families to truly connect before the big day.”</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Camille & Julian" class="author-avatar">
+              <div>
+                <div class="author-name">Camille &amp; Julian Vance</div>
+                <div class="author-event">Rehearsal Dinner · 68 Guests</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-testimonial reveal">
+            <div>
+              <div class="star-rating">★★★★★</div>
+              <p class="testimonial-quote">“Our engagement party in the Cellar Lounge was pure magic. Our friends are still raving about the smoked rosemary cocktails and the intimate speakeasy vibe. Flawless execution!”</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Elena & Marcus" class="author-avatar">
+              <div>
+                <div class="author-name">Elena &amp; Marcus Rossi</div>
+                <div class="author-event">Engagement Soirée · 42 Guests</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-testimonial reveal">
+            <div>
+              <div class="star-rating">★★★★★</div>
+              <p class="testimonial-quote">“As an event planner, my mother had impossibly high standards. The Rosewood exceeded every single expectation. The wine pairings and seamless pacing made our night utterly stress-free.”</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Sofia & David" class="author-avatar">
+              <div>
+                <div class="author-name">Sofia &amp; David Chen</div>
+                <div class="author-event">Rehearsal Banquet · 80 Guests</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Visual Gallery with Lightbox -->
+    <section class="section section-warm">
+      <div class="container">
+        <div class="section-header reveal reveal-scale">
+          <div class="eyebrow">Visual Tour</div>
+          <h2>Moments Captured Under the Glass</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+          <p>Click any photograph to view in our high-resolution estate lightbox.</p>
+        </div>
+
+        <div class="gallery-filter-bar reveal">
+          <button type="button" class="filter-chip is-active" data-gallery-filter="all">All Moments (8)</button>
+          <button type="button" class="filter-chip" data-gallery-filter="conservatory">The Glasshouse (4)</button>
+          <button type="button" class="filter-chip" data-gallery-filter="cellar">Wine Cellar (4)</button>
+          <button type="button" class="filter-chip" data-gallery-filter="dining">Culinary &amp; Toasts (4)</button>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item" data-category="conservatory" onclick="openLightbox('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1600&q=80', 'The Glasshouse Conservatory at Dusk')">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80" alt="Conservatory dinner setup">
+            <div class="gallery-overlay">
+              <span style="font-weight:600;">The Glasshouse at Dusk</span>
+              <span style="font-size:0.8rem; opacity:0.85;">Click to expand</span>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cellar" onclick="openLightbox('assets/images/rosewood-cellar-lounge.jpg', 'The Wine Cellar Vault &amp; Velvet Lounge')">
+            <img src="assets/images/rosewood-cellar-lounge.jpg" alt="Wine cellar vault setup" loading="lazy">
+            <div class="gallery-overlay">
+              <span style="font-weight:600;">Wine Cellar Vault</span>
+              <span style="font-size:0.8rem; opacity:0.85;">Click to expand</span>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="conservatory dining" onclick="openLightbox('assets/images/champagne-welcome.jpg', 'Veranda Walled Courtyard Champagne Welcome under Evening Lanterns')">
+            <img src="assets/images/champagne-welcome.jpg" alt="Courtyard champagne welcome with chilled Blanc de Blancs flutes" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/29811325/pexels-photo-29811325.jpeg?auto=compress&cs=tinysrgb&w=600'">
+            <div class="gallery-overlay">
+              <span style="font-weight:600;">Courtyard Champagne Welcome</span>
+              <span style="font-size:0.8rem; opacity:0.85;">Click to expand</span>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="dining cellar" onclick="openLightbox('https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1600&q=80', 'Plated Chilean Seabass &amp; Seasonal Microgreen Garnish')">
+            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=600&q=80" alt="Plated culinary course">
+            <div class="gallery-overlay">
+              <span style="font-weight:600;">Artisanal Plated Course</span>
+              <span style="font-size:0.8rem; opacity:0.85;">Click to expand</span>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cellar dining" onclick="openLightbox('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1600&q=80', 'Private Sommelier Reserve Tasting Flight')">
+            <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=600&q=80" alt="Vintage reserve wine pouring">
+            <div class="gallery-overlay">
+              <span style="font-weight:600;">Sommelier Reserve Flight</span>
+              <span style="font-size:0.8rem; opacity:0.85;">Click to expand</span>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="conservatory dining" onclick="openLightbox('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1600&q=80', 'Rehearsal Dinner Toast &amp; Champagne Tower')">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80" alt="Champagne celebration toast">
+            <div class="gallery-overlay">
+              <span style="font-weight:600;">Rehearsal Dinner Toast</span>
+              <span style="font-size:0.8rem; opacity:0.85;">Click to expand</span>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="conservatory" onclick="openLightbox('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=80', 'Grand Solarium Dining Hall Under Fairy Lights')">
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80" alt="Grand Solarium candlelit banquet tables">
+            <div class="gallery-overlay">
+              <span style="font-weight:600;">Grand Solarium Hall</span>
+              <span style="font-size:0.8rem; opacity:0.85;">Click to expand</span>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cellar" onclick="openLightbox('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1600&q=80', 'Cellar Terrace &amp; Courtyard Lantern Evening')">
+            <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80" alt="Courtyard terrace illuminated by warm lanterns">
+            <div class="gallery-overlay">
+              <span style="font-weight:600;">Courtyard Lantern Soirée</span>
+              <span style="font-size:0.8rem; opacity:0.85;">Click to expand</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6.5 Curated Luxury FAQ Accordion -->
+    <section class="section section-rose" id="venue-faqs">
+      <div class="container">
+        <div class="section-header reveal reveal-scale">
+          <div class="eyebrow">Frequently Answered</div>
+          <h2>Planning Your Celebration with Ease</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+          <p>Answers to common questions regarding rehearsal dinners, private dining buyouts, and personalized tasting experiences.</p>
+        </div>
+
+        <div class="faq-accordion reveal">
+          <div class="faq-item is-open">
+            <button type="button" class="faq-question" aria-expanded="true">
+              <span>What is included in a private rehearsal dinner reservation?</span>
+              <span class="faq-icon-arrow" aria-hidden="true">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <p>Every reservation includes exclusive private access to your chosen space, handcrafted tables and French bistro chairs, fine linen runners, antique brass candle tapers, dedicated banquet sommelier, audio systems for family toasts, and full post-event breakdown concierge.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Can we customize the culinary menu for dietary requirements?</span>
+              <span class="faq-icon-arrow" aria-hidden="true">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely. Our Executive Chef crafts personalized seasonal tasting menus for each event. We seamlessly accommodate vegan, pescatarian, gluten-free, halal, kosher-style, and allergen-conscious dining without compromising culinary presentation or depth of flavor.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>How far in advance should we reserve our celebration date?</span>
+              <span class="faq-icon-arrow" aria-hidden="true">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <p>Because Friday and Saturday evenings coincide with prime Hudson Valley wedding calendars, we recommend reserving your rehearsal dinner or engagement soirée 6 to 12 months ahead. Sunday through Thursday dates often have flexible 3 to 6 month booking windows.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Can we hold a private tasting session before finalizing our menu?</span>
+              <span class="faq-icon-arrow" aria-hidden="true">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Upon signing your celebration agreement, couples and immediate hosts are invited to a complimentary 3-course private tasting session in the Wine Cellar Vault, where you will taste signature dishes paired with sommelier wine flights to curate your bespoke evening menu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Call to Action Banner -->
+    <section class="section section-dark" style="text-align:center;">
+      <div class="container container-narrow reveal reveal-scale">
+        <div class="eyebrow" style="color:var(--accent-gold);">Reserve Your Date</div>
+        <h2 style="margin-bottom:var(--space-4);">Begin Planning Your Unforgettable Celebration</h2>
+        <p class="lead-text" style="margin-bottom:var(--space-8);">
+          Dates for 2026 &amp; 2027 wedding seasons are reserved on a first-come basis. Schedule a personalized walkthrough and private wine tasting with our event director.
+        </p>
+        <div class="flex justify-center gap-4 flex-wrap">
+          <button class="btn btn-secondary btn-lg btn-magnetic btn-glow" data-open-modal="quick-tour">
+            <span class="btn-shine"></span>
+            <span>Schedule an In-Person Tour</span>
+          </button>
+          <a href="contact.html" class="btn btn-outline-light btn-lg btn-magnetic">
+            <span class="btn-shine"></span>
+            <span>Send Private Inquiry</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo" style="color:#FFF;">
+            <img src="assets/images/logo-monogram.svg" alt="Rosewood Logo" width="40" height="40">
+            <div class="brand-words">
+              <span class="brand-name" style="color:#FFF;">The Rosewood</span>
+              <span class="brand-tagline" style="color:var(--accent-gold);">Glasshouse &amp; Atrium</span>
+            </div>
+          </a>
+          <p class="footer-brand-p">
+            An intimate estate venue dedicated to romantic rehearsal dinners, engagement soirées, and elevated private dining celebrations.
+          </p>
+          <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:0.35rem; font-size:0.85rem; color:rgba(255,255,255,0.7);">
+            <span>428 Rosewood Estate Lane, Hudson Valley, NY 12572</span>
+            <span>Direct Concierge: +1 (845) 555-0194</span>
+          </div>
+        </div>
+
+        <div>
+          <h4>Spaces &amp; Dining</h4>
+          <ul class="footer-nav-list">
+            <li><a href="spaces.html#glasshouse-conservatory">The Glasshouse Conservatory</a></li>
+            <li><a href="spaces.html#cellar-lounge">Rosewood Cellar &amp; Lounge</a></li>
+            <li><a href="spaces.html#veranda-courtyard">Veranda &amp; Walled Courtyard</a></li>
+            <li><a href="spaces.html#grand-solarium">Grand Solarium Dining Hall</a></li>
+            <li><a href="service-details.html">Chef Tasting Menus</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Couple Resources</h4>
+          <ul class="footer-nav-list">
+            <li><a href="home-celebrations.html">Rehearsal Dinners Guide</a></li>
+            <li><a href="packages.html">Celebration Packages</a></li>
+            <li><a href="pricing.html">Cost Estimator</a></li>
+            <li><a href="dashboard.html">Client Couple Portal</a></li>
+            <li><a href="admin.html">Venue Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>The Seasonal Journal</h4>
+          <p>Receive private invitations, seasonal menu previews, and rehearsal dinner etiquette notes.</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email Address">
+            <button type="submit" class="btn btn-secondary btn-sm">Join</button>
+          </form>
+          <div class="social-links" style="margin-top:1.5rem;">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link social-instagram" aria-label="Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link social-x" aria-label="X (formerly Twitter)" title="X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link social-facebook" aria-label="Facebook" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 The Rosewood Glasshouse &amp; Atrium. All rights reserved.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms of Booking</a>
+          <a href="contact.html">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick Tour Booking Modal -->
+  <div class="modal-backdrop" id="quick-tour-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-tour-title">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" data-close-modal aria-label="Close modal">&times;</button>
+      <div class="eyebrow" style="color:var(--accent-rose);">Private Tour &amp; Tasting</div>
+      <h3 id="modal-tour-title" style="margin-bottom:var(--space-2);">Schedule Your Estate Visit</h3>
+      <p style="font-size:0.9rem; margin-bottom:var(--space-6);">Experience our glasshouse conservatory in person and sample pairings with our event director.</p>
+
+      <form id="quick-tour-form" novalidate>
+        <div class="form-group">
+          <label for="tour-name" class="form-label">Full Name *</label>
+          <input type="text" id="tour-name" class="form-control" placeholder="e.g. Victoria Hastings" required pattern="^[A-Za-z\s\.\'\,\-&]+$" title="Names must contain letters only (no numbers)">
+          <div class="form-error"></div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-4);">
+          <div class="form-group">
+            <label for="tour-email" class="form-label">Email Address *</label>
+            <input type="email" id="tour-email" class="form-control" placeholder="name@example.com" required>
+            <div class="form-error"></div>
+          </div>
+          <div class="form-group">
+            <label for="tour-phone" class="form-label">Phone Number *</label>
+            <input type="tel" id="tour-phone" class="form-control" placeholder="+1 (845) 000-0000" required inputmode="tel" pattern="^[0-9+\-\(\)\s\.]+$" title="Please enter numbers only (no alphabet letters)">
+            <div class="form-error"></div>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-4);">
+          <div class="form-group">
+            <label for="tour-celebration-type" class="form-label">Celebration Type</label>
+            <select id="tour-celebration-type" class="form-select">
+              <option value="Rehearsal Dinner">Rehearsal Dinner</option>
+              <option value="Engagement Party">Engagement Party</option>
+              <option value="Welcome Drinks">Welcome Drinks &amp; Soirée</option>
+              <option value="Anniversary">Private Anniversary Banquet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tour-guests" class="form-label">Estimated Guest Count</label>
+            <select id="tour-guests" class="form-select">
+              <option value="25-45">25 – 45 Guests</option>
+              <option value="46-85">46 – 85 Guests</option>
+              <option value="86-130">86 – 130 Guests</option>
+              <option value="130+">130+ Guests</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="tour-date" class="form-label">Preferred Tour Date &amp; Time *</label>
+          <input type="datetime-local" id="tour-date" class="form-control" required>
+          <div class="form-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="tour-notes" class="form-label">Special Notes or Questions</label>
+          <textarea id="tour-notes" class="form-textarea" rows="3" placeholder="Tell us about your wedding timeline, dietary needs, or dream aesthetic..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-full">Request Private Tour Confirmation</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox Modal -->
+  <div class="modal-backdrop" id="gallery-lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" style="padding:1rem;">
+    <div style="max-width:960px; width:100%; position:relative; text-align:center;">
+      <button class="modal-close-btn" data-close-modal aria-label="Close image lightbox" style="top:-45px; inset-inline-end:0; background:#FFF;">&times;</button>
+      <img id="lightbox-img" src="" alt="Enlarged venue photograph" style="max-height:80vh; width:auto; max-width:100%; margin:0 auto; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);">
+      <div id="lightbox-caption" style="color:#FFF; margin-top:1rem; font-family:var(--font-serif); font-size:1.3rem;"></div>
+    </div>
+  </div>
+
+  <!-- Luminous Cursor Aura -->
+  <div class="cursor-aura" aria-hidden="true"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js?v=11"></script>
+  <!-- Animation Engines -->
+  <script src="js/gsap.min.js?v=1"></script>
+  <script src="js/ScrollTrigger.min.js?v=1"></script>
+  <script src="js/main.js?v=18"></script>
+  <script src="js/forms.js?v=12"></script>
+</body>
+</html>

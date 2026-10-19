@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <meta name="description" content="Venue Management & Admin Dashboard for The Rosewood — Analytics, booking inquiries, couple messages, and occupancy tracking.">
+  <title>Admin Management Dashboard | The Rosewood Glasshouse</title>
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/main.css?v=12">
+  <link rel="stylesheet" href="css/components.css?v=13">
+  <link rel="stylesheet" href="css/pages.css?v=14">
+
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('rosewood_theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+
+        var savedDir = localStorage.getItem('rosewood_direction') || 'ltr';
+        document.documentElement.setAttribute('dir', savedDir);
+        document.documentElement.setAttribute('lang', 'en');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body id="admin-dashboard-page">
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo-monogram.svg" alt="Rosewood Logo" class="brand-monogram">
+        <div class="brand-words">
+          <span class="brand-name">The Rosewood</span>
+          <span class="brand-tagline" style="color:var(--accent-gold);">Admin Console</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <div class="nav-item"><a href="admin.html" class="nav-link is-active">Overview &amp; Analytics</a></div>
+        <div class="nav-item"><a href="#bookings-management" class="nav-link">Bookings (24)</a></div>
+        <div class="nav-item"><a href="#messages-inbox" class="nav-link">Messages (3)</a></div>
+        <div class="nav-item"><a href="spaces.html" class="nav-link">Spaces</a></div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="rtl-pill" data-action="toggle-rtl"><span class="rtl-btn-text">RTL</span></button>
+        <button class="control-btn" data-action="toggle-theme" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="btn btn-outline btn-sm" id="btn-export-admin-csv">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Export Bookings CSV</span>
+        </button>
+        <a href="auth.html" class="btn btn-outline btn-sm" onclick="window.showToast('Signed out of admin console.', 'info');">Sign Out</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="site-main section" style="padding-top:var(--space-8);">
+    <div class="container">
+
+      <!-- Admin Top Heading -->
+      <div class="dashboard-header reveal" style="margin-bottom:var(--space-8);">
+        <div class="dashboard-header-bg">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80" alt="Rosewood Estate grand architectural overview and manicured grounds">
+        </div>
+        <div class="dashboard-header-overlay"></div>
+        <div>
+          <div class="eyebrow" style="color:var(--accent-gold); margin-bottom:0.25rem;">Executive Overview</div>
+          <h1 style="font-size:clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom:0.35rem;">Estate Performance &amp; Bookings</h1>
+          <p style="margin:0; font-size:0.95rem; opacity:0.88;">
+            Current Season: <strong>Autumn / Winter 2026</strong> &bull; Real-time synchronization active
+          </p>
+        </div>
+        <div style="background:rgba(255, 255, 255, 0.1); backdrop-filter:blur(10px); padding:0.6rem 1.2rem; border-radius:var(--radius-full); border:1px solid rgba(223, 194, 147, 0.35); font-size:0.85rem; color:#FDFBF7;">
+          <span style="color:#66BB6A; margin-inline-end:0.4rem;">●</span> Live Systems Operational
+        </div>
+      </div>
+
+      <!-- KPI Metrics Grid -->
+      <div class="admin-kpi-grid">
+        <div class="admin-kpi-card reveal">
+          <span class="kpi-title">Monthly Revenue</span>
+          <span class="kpi-value">$84,600</span>
+          <div class="kpi-trend trend-up">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            <span>+18.4% vs last month</span>
+          </div>
+        </div>
+
+        <div class="admin-kpi-card reveal delay-100">
+          <span class="kpi-title">Active Season Bookings</span>
+          <span class="kpi-value">24</span>
+          <div class="kpi-trend trend-up">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            <span>+4 new this week</span>
+          </div>
+        </div>
+
+        <div class="admin-kpi-card reveal delay-200">
+          <span class="kpi-title">Pending Tour Inquiries</span>
+          <span class="kpi-value">9</span>
+          <div style="font-size:0.78rem; color:var(--text-muted); margin-top:var(--space-2);">Avg response: 1.4 hrs</div>
+        </div>
+
+        <div class="admin-kpi-card reveal delay-300">
+          <span class="kpi-title">Weekend Occupancy Rate</span>
+          <span class="kpi-value">92%</span>
+          <div class="kpi-trend trend-up">
+            <span>Peak capacity achieved</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual Charts Grid (SVG Charts) -->
+      <div class="grid grid-2" style="margin-bottom:var(--space-10);">
+        <!-- Revenue Trend Chart -->
+        <div class="chart-card reveal">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:var(--space-4);">
+            <div>
+              <h3 style="font-size:1.25rem; margin:0;">Gross Celebration Revenue (2026)</h3>
+              <div style="font-size:0.8rem; color:var(--text-muted);">Trailing 6 months &bull; Thousands USD</div>
+            </div>
+            <span class="status-badge status-confirmed">On Target</span>
+          </div>
+          <!-- SVG Container injected by admin.js -->
+          <div id="admin-revenue-chart"></div>
+        </div>
+
+        <!-- Event Type Distribution -->
+        <div class="chart-card reveal delay-100">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:var(--space-4);">
+            <div>
+              <h3 style="font-size:1.25rem; margin:0;">Celebration Type Breakdown</h3>
+              <div style="font-size:0.8rem; color:var(--text-muted);">By total reserved dates</div>
+            </div>
+            <span style="font-size:0.8rem; font-weight:600; color:var(--accent-gold);">Total: 24 Events</span>
+          </div>
+
+          <!-- Stylized SVG Donut Chart -->
+          <div style="display:flex; align-items:center; justify-content:space-around; height:220px; flex-wrap:wrap;">
+            <svg width="170" height="170" viewBox="0 0 100 100">
+              <!-- Rehearsal Dinners: 58% (Circumference ~ 251.3) -->
+              <circle cx="50" cy="50" r="40" fill="transparent" stroke="var(--accent-plum)" stroke-width="16" stroke-dasharray="145 106" stroke-dashoffset="25"/>
+              <!-- Engagement Soirées: 32% -->
+              <circle cx="50" cy="50" r="40" fill="transparent" stroke="var(--accent-gold)" stroke-width="16" stroke-dasharray="80 171" stroke-dashoffset="-120"/>
+              <!-- Anniversaries & Welcome: 10% -->
+              <circle cx="50" cy="50" r="40" fill="transparent" stroke="var(--accent-rose)" stroke-width="16" stroke-dasharray="26 225" stroke-dashoffset="-200"/>
+              <!-- Center Label -->
+              <text x="50" y="55" font-family="var(--font-serif)" font-size="14" font-weight="700" fill="var(--text-primary)" text-anchor="middle">24</text>
+            </svg>
+
+            <div style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.85rem;">
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                <span style="width:12px; height:12px; border-radius:2px; background:var(--accent-plum); display:inline-block;"></span>
+                <span><strong>58%</strong> Rehearsal Dinners</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                <span style="width:12px; height:12px; border-radius:2px; background:var(--accent-gold); display:inline-block;"></span>
+                <span><strong>32%</strong> Engagement Soirées</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                <span style="width:12px; height:12px; border-radius:2px; background:var(--accent-rose); display:inline-block;"></span>
+                <span><strong>10%</strong> Welcome Banquets</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bookings Management Section -->
+      <section class="card reveal" style="padding:var(--space-6); margin-bottom:var(--space-10);" id="bookings-management">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:var(--space-4); margin-bottom:var(--space-6);">
+          <div>
+            <h3 style="margin:0;">Recent Bookings &amp; Inquiries</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin:0;">Filter, inspect couple menus, and approve dates.</p>
+          </div>
+
+          <div style="display:flex; gap:var(--space-3); flex-wrap:wrap;">
+            <!-- Live Search -->
+            <input type="text" id="admin-booking-search" class="form-control" placeholder="Search by couple or space..." style="max-width:240px; padding:0.55rem 0.85rem; font-size:0.85rem;">
+            
+            <!-- Status Filter -->
+            <select id="admin-status-filter" class="form-select" style="max-width:180px; padding:0.55rem 0.85rem; font-size:0.85rem;">
+              <option value="all">All Statuses</option>
+              <option value="confirmed">Confirmed</option>
+              <option value="pending">Pending</option>
+              <option value="waitlist">Waitlist</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Table Container -->
+        <div class="data-table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Couple / Host</th>
+                <th>Space Reserved</th>
+                <th>Event Date</th>
+                <th>Guests</th>
+                <th>Investment</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="admin-bookings-table-body">
+              <!-- Injected by admin.js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Client Inquiries & Messages Inbox -->
+      <section class="card reveal" style="padding:var(--space-6);" id="messages-inbox">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:var(--space-4);">
+          <div>
+            <h3 style="margin:0;">Director Inbox &amp; Client Inquiries</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin:0;">3 unhandled inquiries awaiting concierge reply.</p>
+          </div>
+          <button class="btn btn-outline btn-sm" onclick="window.showToast('All inbox notifications cleared.', 'info');">Mark All Read</button>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:var(--space-3);">
+          <!-- Message 1 -->
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:var(--space-4); background:var(--bg-surface-warm); border-radius:var(--radius-md); border-inline-start:4px solid var(--accent-gold); flex-wrap:wrap; gap:var(--space-2);">
+            <div>
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                <strong>Lady Penelope Shaw</strong>
+                <span class="status-badge status-pending" style="font-size:0.7rem;">New Inquiry</span>
+                <span style="font-size:0.75rem; color:var(--text-muted);">2 hours ago</span>
+              </div>
+              <div style="font-size:0.9rem; color:var(--text-secondary); margin-top:0.25rem;">
+                Subject: <em>Private Sommelier Tasting for 40 Guests in Cellar Lounge</em>
+              </div>
+            </div>
+            <button class="btn btn-secondary btn-sm btn-reply-message">Reply via Concierge</button>
+          </div>
+
+          <!-- Message 2 -->
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:var(--space-4); background:var(--bg-surface); border-radius:var(--radius-md); border:1px solid var(--border-color); flex-wrap:wrap; gap:var(--space-2);">
+            <div>
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                <strong>Julian Vance</strong>
+                <span style="font-size:0.75rem; color:var(--text-muted);">5 hours ago</span>
+              </div>
+              <div style="font-size:0.9rem; color:var(--text-secondary); margin-top:0.25rem;">
+                Subject: <em>Re: Dietary adjustments for bridal party Seabass entrée</em>
+              </div>
+            </div>
+            <button class="btn btn-outline btn-sm btn-reply-message">Reply</button>
+          </div>
+
+          <!-- Message 3 -->
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:var(--space-4); background:var(--bg-surface); border-radius:var(--radius-md); border:1px solid var(--border-color); flex-wrap:wrap; gap:var(--space-2);">
+            <div>
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                <strong>Elena Rossi</strong>
+                <span style="font-size:0.75rem; color:var(--text-muted);">Yesterday</span>
+              </div>
+              <div style="font-size:0.9rem; color:var(--text-secondary); margin-top:0.25rem;">
+                Subject: <em>Acoustic Duo electrical rider question for Courtyard</em>
+              </div>
+            </div>
+            <button class="btn btn-outline btn-sm btn-reply-message">Reply</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo" style="color:#FFF;">
+            <img src="assets/images/logo-monogram.svg" alt="Rosewood Logo" width="40" height="40">
+            <div class="brand-words">
+              <span class="brand-name" style="color:#FFF;">The Rosewood</span>
+              <span class="brand-tagline" style="color:var(--accent-gold);">Glasshouse &amp; Atrium</span>
+            </div>
+          </a>
+          <p class="footer-brand-p">
+            An intimate estate venue dedicated to romantic rehearsal dinners, engagement soirées, and elevated private dining celebrations.
+          </p>
+          <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:0.35rem; font-size:0.85rem; color:rgba(255,255,255,0.7);">
+            <span>428 Rosewood Estate Lane, Hudson Valley, NY 12572</span>
+            <span>Direct Concierge: +1 (845) 555-0194</span>
+          </div>
+        </div>
+
+        <div>
+          <h4>Spaces &amp; Dining</h4>
+          <ul class="footer-nav-list">
+            <li><a href="spaces.html#glasshouse-conservatory">The Glasshouse Conservatory</a></li>
+            <li><a href="spaces.html#cellar-lounge">Rosewood Cellar &amp; Lounge</a></li>
+            <li><a href="spaces.html#veranda-courtyard">Veranda &amp; Walled Courtyard</a></li>
+            <li><a href="spaces.html#grand-solarium">Grand Solarium Dining Hall</a></li>
+            <li><a href="service-details.html">Chef Tasting Menus</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Couple Resources</h4>
+          <ul class="footer-nav-list">
+            <li><a href="home-celebrations.html">Rehearsal Dinners Guide</a></li>
+            <li><a href="packages.html">Celebration Packages</a></li>
+            <li><a href="pricing.html">Cost Estimator</a></li>
+            <li><a href="dashboard.html">Client Couple Portal</a></li>
+            <li><a href="admin.html">Venue Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>The Seasonal Journal</h4>
+          <p>Receive private invitations, seasonal menu previews, and rehearsal dinner etiquette notes.</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email Address">
+            <button type="submit" class="btn btn-secondary btn-sm">Join</button>
+          </form>
+          <div class="social-links" style="margin-top:1.5rem;">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link social-instagram" aria-label="Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link social-x" aria-label="X (formerly Twitter)" title="X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link social-facebook" aria-label="Facebook" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 The Rosewood Glasshouse &amp; Atrium. All rights reserved.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms of Booking</a>
+          <a href="contact.html">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Admin Booking Details Modal -->
+  <div class="modal-backdrop" id="admin-booking-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" data-close-modal>&times;</button>
+      <div id="admin-booking-detail-content">
+        <!-- Injected live by admin.js -->
+      </div>
+      <div style="margin-top:var(--space-6); display:flex; justify-content:flex-end; gap:var(--space-3);">
+        <button class="btn btn-primary btn-sm" data-close-modal>Close Details</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js?v=11"></script>
+  <!-- Animation Engines -->
+  <script src="js/gsap.min.js?v=1"></script>
+  <script src="js/ScrollTrigger.min.js?v=1"></script>
+  <script src="js/main.js?v=18"></script>
+  <script src="js/admin.js?v=10"></script>
+  <script src="js/forms.js?v=12"></script>
+</body>
+</html>

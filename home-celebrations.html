@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <meta name="description" content="Rehearsal Dinners & Engagement Parties at The Rosewood — Intimate timelines, private conservatory dining, and bespoke celebration packages in the Hudson Valley.">
+  <title>Rehearsal Dinners &amp; Engagement Celebrations | The Rosewood Glasshouse</title>
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/main.css?v=12">
+  <link rel="stylesheet" href="css/components.css?v=13">
+  <link rel="stylesheet" href="css/pages.css?v=14">
+
+  <style>
+    /* Direct override to guarantee instant update without cache lag */
+    .hero-feature-banner {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      background: var(--bg-surface) !important;
+      border: 1px solid rgba(194, 155, 88, 0.4) !important;
+      border-radius: var(--radius-xl) !important;
+      padding: 1.35rem 1.65rem !important;
+      box-shadow: 0 12px 32px -8px rgba(31, 24, 27, 0.08), 0 0 18px rgba(194, 155, 88, 0.08) !important;
+      gap: 0.85rem !important;
+      position: relative !important;
+      overflow: hidden !important;
+      animation: bannerFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .hero-feature-banner::after {
+      display: none !important;
+    }
+    .hero-feature-banner:hover {
+      transform: translateY(-4px) !important;
+      border-color: var(--accent-gold) !important;
+      box-shadow: 0 18px 40px -8px rgba(31, 24, 27, 0.14), 0 0 28px rgba(194, 155, 88, 0.22) !important;
+    }
+    .banner-top-row {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 0.75rem !important;
+      width: 100% !important;
+    }
+    .feature-banner-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.55rem !important;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(139, 44, 75, 0.08) 100%) !important;
+      padding: 0.42rem 0.95rem !important;
+      border-radius: var(--radius-full) !important;
+      font-size: 0.8rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.03em !important;
+      white-space: nowrap !important;
+      border: 1px solid rgba(212, 175, 55, 0.4) !important;
+      box-shadow: 0 2px 10px rgba(212, 175, 55, 0.1) !important;
+      flex-shrink: 0 !important;
+    }
+    .badge-animated-text {
+      font-weight: 700 !important;
+      letter-spacing: 0.03em !important;
+      color: var(--accent-plum) !important;
+      -webkit-text-fill-color: var(--accent-plum) !important;
+      background: none !important;
+    }
+    [data-theme="dark"] .badge-animated-text {
+      color: var(--accent-gold) !important;
+      -webkit-text-fill-color: var(--accent-gold) !important;
+    }
+    .feature-banner-text {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      gap: 0.35rem !important;
+    }
+    .banner-title-row {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+    }
+    .banner-headline {
+      font-size: clamp(1.15rem, 1.45vw, 1.35rem) !important;
+      font-family: var(--font-serif) !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.01em !important;
+      line-height: 1.3 !important;
+      color: var(--text-primary) !important;
+      -webkit-text-fill-color: var(--text-primary) !important;
+      background: none !important;
+      display: block !important;
+      margin: 0 !important;
+    }
+    [data-theme="dark"] .banner-headline {
+      color: var(--text-primary) !important;
+      -webkit-text-fill-color: var(--text-primary) !important;
+    }
+    .banner-accent-line {
+      display: block !important;
+      width: 72px !important;
+      height: 2px !important;
+      margin: 0.2rem 0 0.4rem 0 !important;
+      border-radius: 99px !important;
+      background: linear-gradient(90deg, var(--accent-gold) 0%, rgba(212, 175, 55, 0.3) 70%, transparent 100%) !important;
+    }
+    .banner-subtext {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 0.5rem 0.75rem !important;
+      width: 100% !important;
+    }
+    .highlight-shimmer-tag {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.22rem 0.7rem !important;
+      border-radius: 999px !important;
+      font-size: 0.8rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.02em !important;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.16) 0%, rgba(139, 44, 75, 0.08) 100%) !important;
+      border: 1px solid rgba(212, 175, 55, 0.4) !important;
+      color: var(--accent-plum) !important;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+    }
+    [data-theme="dark"] .highlight-shimmer-tag {
+      color: var(--accent-gold) !important;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(223, 194, 147, 0.1) 100%) !important;
+    }
+    .subtext-body {
+      color: var(--text-secondary) !important;
+      font-size: 0.88rem !important;
+      line-height: 1.5 !important;
+      margin: 0 !important;
+      flex: 1 1 200px !important;
+    }
+  </style>
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('rosewood_theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+
+        var savedDir = localStorage.getItem('rosewood_direction') || 'ltr';
+        document.documentElement.setAttribute('dir', savedDir);
+        document.documentElement.setAttribute('lang', 'en');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo-monogram.svg" alt="Rosewood Logo" class="brand-monogram">
+        <div class="brand-words">
+          <span class="brand-name">The Rosewood</span>
+          <span class="brand-tagline">Glasshouse &amp; Atrium</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link is-active">
+            <span>Home</span>
+            <svg class="icon-caret" width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0h10L5 6z"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="index.html" class="dropdown-link">
+              <span class="dropdown-title">Estate Overview</span>
+              <span class="dropdown-desc">General venue overview</span>
+            </a>
+            <a href="home-celebrations.html" class="dropdown-link">
+              <span class="dropdown-title">Rehearsals &amp; Engagements</span>
+              <span class="dropdown-desc">Niche celebration focus &amp; timelines</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="spaces.html" class="nav-link">Spaces</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">Services</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="packages.html" class="nav-link">Packages</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="pricing.html" class="nav-link">Pricing</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="about.html" class="nav-link">Our Story</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="blog.html" class="nav-link">Journal</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="dashboard.html" class="nav-link">Couple Portal</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="rtl-pill" data-action="toggle-rtl">
+          <span class="rtl-btn-text">RTL</span>
+        </button>
+        <button class="control-btn" data-action="toggle-theme" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="btn btn-primary btn-sm" data-open-modal="quick-tour">Book a Tour</button>
+        <button class="nav-toggle" data-action="toggle-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <img src="assets/images/logo-monogram.svg" alt="Rosewood Monogram" width="36" height="36">
+        <span class="brand-name" style="font-size:1.2rem;">The Rosewood</span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">General Venue Home</a></li>
+      <li><a href="home-celebrations.html" class="mobile-nav-link text-gold">Rehearsals &amp; Engagements</a></li>
+      <li><a href="spaces.html" class="mobile-nav-link">Spaces &amp; Capacities</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="packages.html" class="mobile-nav-link">Celebration Packages</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link">Interactive Estimator</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Etiquette &amp; Journal</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact &amp; Tours</a></li>
+      <li><a href="dashboard.html" class="mobile-nav-link">Client RSVP Dashboard</a></li>
+      <li><a href="admin.html" class="mobile-nav-link">Venue Admin Portal</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-primary w-full" data-open-modal="quick-tour">Schedule Private Tasting</button>
+    </div>
+  </aside>
+
+  <main id="main-content" class="site-main">
+
+    <!-- Split Hero for Rehearsals & Engagements -->
+    <section class="hero-split">
+      <div class="container">
+        <div class="hero-split-grid">
+          <div class="reveal">
+            <div class="eyebrow">Intimate Celebrations</div>
+            <h1 style="margin-bottom:var(--space-4);">The Prelude to Forever: Rehearsal Dinners &amp; Engagement Soirées</h1>
+            <p class="lead-text" style="margin-bottom:var(--space-8);">
+              Before the grand wedding day arrives, savor an unhurried evening enveloped in candlelight. At The Rosewood, we specialize in the warmth of intimate dining, emotional family toasts, and handcrafted seasonal menus.
+            </p>
+            <div class="flex gap-4 flex-wrap">
+              <button class="btn btn-primary btn-lg" data-open-modal="quick-tour">Inquire for Your Date</button>
+              <a href="#sample-timelines" class="btn btn-outline btn-lg">Explore Sample Timelines</a>
+            </div>
+          </div>
+
+          <div class="hero-visual-card-wrapper reveal delay-200">
+            <div class="hero-media-frame">
+              <img src="assets/images/celebrations-hero.jpg" alt="Intimate candlelit rehearsal dinner toast in The Rosewood Glasshouse Conservatory" class="hero-img-showcase">
+            </div>
+
+            <!-- Highlights Card Below Image with Dynamic Animated Elements -->
+            <div class="hero-feature-banner">
+              <div class="banner-top-row">
+                <div class="feature-banner-badge">
+                  <span class="pulsing-status-dot" aria-hidden="true"></span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                  <span class="badge-animated-text">100% Private Venue Buyout</span>
+                </div>
+                <span class="live-sparkle" aria-hidden="true">✦</span>
+              </div>
+              <div class="feature-banner-text">
+                <div class="banner-title-row">
+                  <strong class="banner-headline">Sole Estate Exclusivity for Your Evening</strong>
+                </div>
+                <div class="banner-accent-line" aria-hidden="true"></div>
+                <div class="banner-subtext">
+                  <span class="highlight-shimmer-tag"><span class="subtext-pill-dot" aria-hidden="true"></span>Never shared, never rushed</span>
+                  <span class="subtext-body">5 hours of dedicated conservatory &amp; garden access for 30–85 guests.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Occasion-Specific Comparison: Rehearsal vs Engagement -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">Two Distinct Celebrations</div>
+          <h2>Bespoke Atmospheres Tailored to Your Milestone</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <!-- Rehearsal Dinner Card -->
+          <div class="card reveal" style="padding:var(--space-8); border-inline-start:4px solid var(--accent-plum);">
+            <div class="eyebrow-no-line eyebrow" style="color:var(--accent-plum);">The Rehearsal Dinner</div>
+            <h3 style="margin-bottom:var(--space-3);">Intimate, Heartfelt &amp; Unhurried</h3>
+            <p style="margin-bottom:var(--space-4);">
+              Typically hosted for immediate family, wedding parties, and cherished out-of-town guests the evening before the wedding. Our rehearsal experience prioritizes seated fine dining, personal speech acoustics, and deep connection.
+            </p>
+            <ul class="feature-list" style="margin-block:var(--space-4);">
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Speech-Friendly Acoustics:</strong> Precision sound with wireless roving mics so every parent's memory is heard clearly.</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>3 or 4-Course Plated Banquets:</strong> Seated family dining with wine pairings that allow relaxed conversations.</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Rehearsal Run-of-Show Assistance:</strong> Our maître d' coordinates arrivals directly following church or garden rehearsal.</span>
+              </li>
+            </ul>
+            <div style="margin-top:var(--space-6);">
+              <a href="packages.html#twilight-rehearsal" class="btn btn-primary btn-sm">Explore Rehearsal Package &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Engagement Party Card -->
+          <div class="card reveal delay-100" style="padding:var(--space-8); border-inline-start:4px solid var(--accent-gold);">
+            <div class="eyebrow-no-line eyebrow" style="color:var(--accent-gold);">The Engagement Soirée</div>
+            <h3 style="margin-bottom:var(--space-3);">Effervescent, Social &amp; Joyful</h3>
+            <p style="margin-bottom:var(--space-4);">
+              Announce and celebrate your proposal with friends and extended circles. Designed for lively cocktail hours, interactive tasting stations, champagne towers, and dancing under the stars.
+            </p>
+            <ul class="feature-list" style="margin-block:var(--space-4);">
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Signature Cocktail Stations:</strong> Bespoke His &amp; Hers cocktails crafted with artisanal syrups and dried botanicals.</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Champagne Tower Pouring:</strong> A show-stopping photo centerpiece with sparkling vintage flutes.</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Lounge &amp; Veranda Mingling:</strong> Plush velvet lounge vignettes and outdoor courtyard fire bowls.</span>
+              </li>
+            </ul>
+            <div style="margin-top:var(--space-6);">
+              <a href="packages.html#golden-engagement" class="btn btn-secondary btn-sm">Explore Engagement Package &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sample Evening Timelines (Interactive Stepper) -->
+    <section class="section section-warm" id="sample-timelines">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">Pacing &amp; Flow</div>
+          <h2>Sample Celebration Timelines</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+          <p>See how seamlessly an evening unfolds at The Rosewood with our curated run-of-show.</p>
+        </div>
+
+        <!-- Tabs for Rehearsal vs Engagement Timeline -->
+        <div class="tabs-wrapper reveal">
+          <div class="tabs-nav justify-center">
+            <button class="tab-btn is-active" data-tab="timeline-rehearsal">Rehearsal Dinner Flow (5:30 – 9:30 PM)</button>
+            <button class="tab-btn" data-tab="timeline-engagement">Engagement Soirée Flow (6:00 – 10:00 PM)</button>
+          </div>
+
+          <!-- Rehearsal Timeline Panel -->
+          <div class="tab-panel is-active" id="timeline-rehearsal">
+            <div class="timeline-stepper">
+              <div class="timeline-item">
+                <div class="timeline-marker">1</div>
+                <div class="timeline-card">
+                  <div class="timeline-time">5:30 PM – 6:15 PM</div>
+                  <h4>Courtyard Welcome &amp; Sparkling Flutes</h4>
+                  <p>Guests arrive directly from ceremony rehearsal to the Veranda Courtyard. Passed chilled French Champagne and delicate gougères set a relaxed tone as bridal parties mingle.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker">2</div>
+                <div class="timeline-card">
+                  <div class="timeline-time">6:15 PM – 6:30 PM</div>
+                  <h4>Transition &amp; Welcome Toast by Hosts</h4>
+                  <p>Guests are invited under the iron-framed arches of The Glasshouse Conservatory. The host or parents of the groom deliver the opening welcome toast before dinner service commences.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker">3</div>
+                <div class="timeline-card">
+                  <div class="timeline-time">6:30 PM – 8:15 PM</div>
+                  <h4>3-Course Plated Banquet with Sommelier Pairings</h4>
+                  <p>A culinary symphony of Hudson Valley organic fare served family-style or individually plated. Paced intentionally with breaks between courses for speeches by the best man and maid of honor.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker">4</div>
+                <div class="timeline-card">
+                  <div class="timeline-time">8:15 PM – 9:30 PM</div>
+                  <h4>Dessert Salon, Digestifs &amp; Gift Exchange</h4>
+                  <p>Warm espresso bar, miniature lemon tarts, and digestifs in the Cellar Lounge. An intimate window for the couple to present wedding party thank-you gifts in privacy.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Engagement Timeline Panel -->
+          <div class="tab-panel" id="timeline-engagement">
+            <div class="timeline-stepper">
+              <div class="timeline-item">
+                <div class="timeline-marker">1</div>
+                <div class="timeline-card">
+                  <div class="timeline-time">6:00 PM – 7:00 PM</div>
+                  <h4>Cocktail Arrival &amp; Artisanal Grazing</h4>
+                  <p>Bespoke signature cocktails poured over crystal hand-carved ice. An expansive 14-foot Hudson Valley artisanal cheese, charcuterie, and honeycomb table greets entering friends.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker">2</div>
+                <div class="timeline-card">
+                  <div class="timeline-time">7:00 PM – 7:30 PM</div>
+                  <h4>The Grand Champagne Tower Toast</h4>
+                  <p>The couple pours the ceremonial top glass of the 5-tier champagne tower. Heartfelt engagement congratulations, cheers, and golden hour portrait sessions under the wisteria terrace.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker">3</div>
+                <div class="timeline-card">
+                  <div class="timeline-time">7:30 PM – 9:00 PM</div>
+                  <h4>Interactive Chef Stations &amp; Passed Small Plates</h4>
+                  <p>Handmade truffle gnocchi in parmesan wheels, fresh oysters on half-shell, and gourmet sliders circulated continuously by white-glove servers.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker">4</div>
+                <div class="timeline-card">
+                  <div class="timeline-time">9:00 PM – 10:00 PM</div>
+                  <h4>Courtyard Music, Firebowls &amp; Sweet Treats</h4>
+                  <p>Outdoor acoustic guitar or curated vinyl sounds around warm firebowls with signature s'mores tartlets and craft nightcaps.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages Highlight -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">Transparent Value</div>
+          <h2>Curated Celebration Packages</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+          <p>Thoughtfully bundled menus, bar options, tablescapes, and coordination services with zero hidden surcharges.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Package 1 -->
+          <div class="card card-package reveal">
+            <h4>The Twilight Rehearsal</h4>
+            <p style="font-size:0.875rem; color:var(--text-muted);">Ideal for 25–85 guests</p>
+            <div class="package-price">
+              <span class="price-currency">$</span>
+              <span class="price-amount">145</span>
+              <span class="price-unit">/ guest</span>
+            </div>
+            <p style="font-size:0.9rem;">Plated 3-course dinner, sommelier wine service, candlelit tablescape &amp; sound coordination.</p>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>3-Course seasonal farm-to-table dinner</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Sommelier red &amp; white wine pairings</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Pillar candle &amp; floral tablescapes</span>
+              </li>
+            </ul>
+            <div style="margin-top:auto; padding-top:var(--space-4);">
+              <a href="packages.html#twilight-rehearsal" class="btn btn-outline w-full">View Full Inclusions</a>
+            </div>
+          </div>
+
+          <!-- Package 2 (Featured) -->
+          <div class="card card-package is-featured reveal delay-100">
+            <span class="package-ribbon">Most Celebrated</span>
+            <h4>The Golden Hour Soirée</h4>
+            <p style="font-size:0.875rem; color:var(--text-muted);">Ideal for 35–120 guests</p>
+            <div class="package-price">
+              <span class="price-currency">$</span>
+              <span class="price-amount">165</span>
+              <span class="price-unit">/ guest</span>
+            </div>
+            <p style="font-size:0.9rem;">4-Hour open bar, 6 passed canapés, 2 chef action stations &amp; champagne tower pour.</p>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>4-Hour Premium Open Bar &amp; Cocktails</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>6 Butler-passed artisanal canapés</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>5-Tier Champagne Tower toast experience</span>
+              </li>
+            </ul>
+            <div style="margin-top:auto; padding-top:var(--space-4);">
+              <a href="packages.html#golden-engagement" class="btn btn-secondary w-full">Select Golden Hour</a>
+            </div>
+          </div>
+
+          <!-- Package 3 -->
+          <div class="card card-package reveal delay-200">
+            <h4>The Grand Gala</h4>
+            <p style="font-size:0.875rem; color:var(--text-muted);">Ideal for 50–180 guests</p>
+            <div class="package-price">
+              <span class="price-currency">$</span>
+              <span class="price-amount">215</span>
+              <span class="price-unit">/ guest</span>
+            </div>
+            <p style="font-size:0.9rem;">5-Course tasting menu, reserve vintage French Champagne, live music trio &amp; suite stay.</p>
+            <ul class="feature-list">
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>5-Course Chef Tasting with cellar pairings</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Live Jazz or Acoustic Duo for 3 hours</span>
+              </li>
+              <li class="feature-item">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Complimentary overnight stay in Estate Suite</span>
+              </li>
+            </ul>
+            <div style="margin-top:auto; padding-top:var(--space-4);">
+              <a href="packages.html#grand-celebration" class="btn btn-outline w-full">View Full Inclusions</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top:var(--space-10);">
+          <a href="pricing.html" class="btn btn-outline-gold">Try the Interactive Pricing &amp; Guest Calculator &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section class="section section-dark" style="text-align:center;">
+      <div class="container container-narrow reveal">
+        <div class="eyebrow" style="color:var(--accent-gold);">Plan Your Milestones</div>
+        <h2>Ready to Celebrate Your Love Story?</h2>
+        <p class="lead-text" style="margin-bottom:var(--space-8);">
+          Let our experienced team take care of every detail so you can simply revel in the joy of your engagement or rehearse in calm luxury.
+        </p>
+        <button class="btn btn-secondary btn-lg" data-open-modal="quick-tour">Schedule an In-Person Walkthrough</button>
+      </div>
+    </section>
+
+  </main>  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo" style="color:#FFF;">
+            <img src="assets/images/logo-monogram.svg" alt="Rosewood Logo" width="40" height="40">
+            <div class="brand-words">
+              <span class="brand-name" style="color:#FFF;">The Rosewood</span>
+              <span class="brand-tagline" style="color:var(--accent-gold);">Glasshouse &amp; Atrium</span>
+            </div>
+          </a>
+          <p class="footer-brand-p">
+            An intimate estate venue dedicated to romantic rehearsal dinners, engagement soirées, and elevated private dining celebrations.
+          </p>
+          <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:0.35rem; font-size:0.85rem; color:rgba(255,255,255,0.7);">
+            <span>428 Rosewood Estate Lane, Hudson Valley, NY 12572</span>
+            <span>Direct Concierge: +1 (845) 555-0194</span>
+          </div>
+        </div>
+
+        <div>
+          <h4>Spaces &amp; Dining</h4>
+          <ul class="footer-nav-list">
+            <li><a href="spaces.html#glasshouse-conservatory">The Glasshouse Conservatory</a></li>
+            <li><a href="spaces.html#cellar-lounge">Rosewood Cellar &amp; Lounge</a></li>
+            <li><a href="spaces.html#veranda-courtyard">Veranda &amp; Walled Courtyard</a></li>
+            <li><a href="spaces.html#grand-solarium">Grand Solarium Dining Hall</a></li>
+            <li><a href="service-details.html">Chef Tasting Menus</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Couple Resources</h4>
+          <ul class="footer-nav-list">
+            <li><a href="home-celebrations.html">Rehearsal Dinners Guide</a></li>
+            <li><a href="packages.html">Celebration Packages</a></li>
+            <li><a href="pricing.html">Cost Estimator</a></li>
+            <li><a href="dashboard.html">Client Couple Portal</a></li>
+            <li><a href="admin.html">Venue Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>The Seasonal Journal</h4>
+          <p>Receive private invitations, seasonal menu previews, and rehearsal dinner etiquette notes.</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email Address">
+            <button type="submit" class="btn btn-secondary btn-sm">Join</button>
+          </form>
+          <div class="social-links" style="margin-top:1.5rem;">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link social-instagram" aria-label="Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link social-x" aria-label="X (formerly Twitter)" title="X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link social-facebook" aria-label="Facebook" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 The Rosewood Glasshouse &amp; Atrium. All rights reserved.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms of Booking</a>
+          <a href="contact.html">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick Tour Modal -->
+  <div class="modal-backdrop" id="quick-tour-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" data-close-modal>&times;</button>
+      <div class="eyebrow" style="color:var(--accent-rose);">Private Tour</div>
+      <h3>Schedule Your Celebration Walkthrough</h3>
+      <form id="quick-tour-form" novalidate style="margin-top:1.5rem;">
+        <div class="form-group">
+          <label class="form-label">Couple Names *</label>
+          <input type="text" class="form-control" required placeholder="e.g. Victoria &amp; Liam">
+          <div class="form-error"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" class="form-control" required placeholder="name@example.com">
+          <div class="form-error"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Occasion Type</label>
+          <select class="form-select">
+            <option>Rehearsal Dinner</option>
+            <option>Engagement Soirée</option>
+            <option>Welcome Party</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Estimated Date</label>
+          <input type="date" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary w-full">Request Availability Confirmation</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/data.js?v=11"></script>
+  <!-- Animation Engines -->
+  <script src="js/gsap.min.js?v=1"></script>
+  <script src="js/ScrollTrigger.min.js?v=1"></script>
+  <script src="js/main.js?v=18"></script>
+  <script src="js/forms.js?v=12"></script>
+</body>
+</html>

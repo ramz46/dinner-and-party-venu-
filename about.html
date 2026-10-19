@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <meta name="description" content="About The Rosewood Glasshouse & Atrium — The history, mission, culinary vision, and team behind Hudson Valley's premier rehearsal dinner and celebration estate.">
+  <title>Our Story &amp; Estate Heritage | The Rosewood Glasshouse</title>
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/main.css?v=12">
+  <link rel="stylesheet" href="css/components.css?v=13">
+  <link rel="stylesheet" href="css/pages.css?v=14">
+
+  <style>
+    /* Direct override to guarantee instant update without cache lag */
+    .hero-feature-banner {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      background: var(--bg-surface) !important;
+      border: 1px solid rgba(194, 155, 88, 0.4) !important;
+      border-radius: var(--radius-xl) !important;
+      padding: 1.35rem 1.65rem !important;
+      box-shadow: 0 12px 32px -8px rgba(31, 24, 27, 0.08), 0 0 18px rgba(194, 155, 88, 0.08) !important;
+      gap: 0.85rem !important;
+      position: relative !important;
+      overflow: hidden !important;
+      animation: bannerFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .hero-feature-banner::after {
+      display: none !important;
+    }
+    .hero-feature-banner:hover {
+      transform: translateY(-4px) !important;
+      border-color: var(--accent-gold) !important;
+      box-shadow: 0 18px 40px -8px rgba(31, 24, 27, 0.14), 0 0 28px rgba(194, 155, 88, 0.22) !important;
+    }
+    .banner-top-row {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 0.75rem !important;
+      width: 100% !important;
+    }
+    .feature-banner-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.55rem !important;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(139, 44, 75, 0.08) 100%) !important;
+      padding: 0.42rem 0.95rem !important;
+      border-radius: var(--radius-full) !important;
+      font-size: 0.8rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.03em !important;
+      white-space: nowrap !important;
+      border: 1px solid rgba(212, 175, 55, 0.4) !important;
+      box-shadow: 0 2px 10px rgba(212, 175, 55, 0.1) !important;
+      flex-shrink: 0 !important;
+    }
+    .badge-animated-text {
+      font-weight: 700 !important;
+      letter-spacing: 0.03em !important;
+      color: var(--accent-plum) !important;
+      -webkit-text-fill-color: var(--accent-plum) !important;
+      background: none !important;
+    }
+    [data-theme="dark"] .badge-animated-text {
+      color: var(--accent-gold) !important;
+      -webkit-text-fill-color: var(--accent-gold) !important;
+    }
+    .feature-banner-text {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      gap: 0.35rem !important;
+    }
+    .banner-title-row {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+    }
+    .banner-headline {
+      font-size: clamp(1.15rem, 1.45vw, 1.35rem) !important;
+      font-family: var(--font-serif) !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.01em !important;
+      line-height: 1.3 !important;
+      color: var(--text-primary) !important;
+      -webkit-text-fill-color: var(--text-primary) !important;
+      background: none !important;
+      display: block !important;
+      margin: 0 !important;
+    }
+    [data-theme="dark"] .banner-headline {
+      color: var(--text-primary) !important;
+      -webkit-text-fill-color: var(--text-primary) !important;
+    }
+    .banner-accent-line {
+      display: block !important;
+      width: 72px !important;
+      height: 2px !important;
+      margin: 0.2rem 0 0.4rem 0 !important;
+      border-radius: 99px !important;
+      background: linear-gradient(90deg, var(--accent-gold) 0%, rgba(212, 175, 55, 0.3) 70%, transparent 100%) !important;
+    }
+    .banner-subtext {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 0.5rem 0.75rem !important;
+      width: 100% !important;
+    }
+    .highlight-shimmer-tag {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.22rem 0.7rem !important;
+      border-radius: 999px !important;
+      font-size: 0.8rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.02em !important;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.16) 0%, rgba(139, 44, 75, 0.08) 100%) !important;
+      border: 1px solid rgba(212, 175, 55, 0.4) !important;
+      color: var(--accent-plum) !important;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+    }
+    [data-theme="dark"] .highlight-shimmer-tag {
+      color: var(--accent-gold) !important;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(223, 194, 147, 0.1) 100%) !important;
+    }
+    .subtext-body {
+      color: var(--text-secondary) !important;
+      font-size: 0.88rem !important;
+      line-height: 1.5 !important;
+      margin: 0 !important;
+      flex: 1 1 200px !important;
+    }
+  </style>
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('rosewood_theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+
+        var savedDir = localStorage.getItem('rosewood_direction') || 'ltr';
+        document.documentElement.setAttribute('dir', savedDir);
+        document.documentElement.setAttribute('lang', 'en');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/logo-monogram.svg" alt="Rosewood Logo" class="brand-monogram">
+        <div class="brand-words">
+          <span class="brand-name">The Rosewood</span>
+          <span class="brand-tagline">Glasshouse &amp; Atrium</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">
+            <span>Home</span>
+            <svg class="icon-caret" width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0h10L5 6z"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="index.html" class="dropdown-link">
+              <span class="dropdown-title">Estate Overview</span>
+              <span class="dropdown-desc">General venue overview</span>
+            </a>
+            <a href="home-celebrations.html" class="dropdown-link">
+              <span class="dropdown-title">Rehearsals &amp; Engagements</span>
+              <span class="dropdown-desc">Niche celebration focus &amp; timelines</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="spaces.html" class="nav-link">Spaces</a>
+        </div>
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">Services</a>
+        </div>
+        <div class="nav-item">
+          <a href="packages.html" class="nav-link">Packages</a>
+        </div>
+        <div class="nav-item">
+          <a href="pricing.html" class="nav-link">Pricing</a>
+        </div>
+        <div class="nav-item">
+          <a href="about.html" class="nav-link is-active">Our Story</a>
+        </div>
+        <div class="nav-item">
+          <a href="blog.html" class="nav-link">Journal</a>
+        </div>
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-item">
+          <a href="dashboard.html" class="nav-link">Couple Portal</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="rtl-pill" data-action="toggle-rtl">
+          <span class="rtl-btn-text">RTL</span>
+        </button>
+        <button class="control-btn" data-action="toggle-theme" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="btn btn-primary btn-sm" data-open-modal="quick-tour">Book a Tour</button>
+        <button class="nav-toggle" data-action="toggle-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <img src="assets/images/logo-monogram.svg" alt="Rosewood Monogram" width="36" height="36">
+        <span class="brand-name" style="font-size:1.2rem;">The Rosewood</span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">General Venue Home</a></li>
+      <li><a href="home-celebrations.html" class="mobile-nav-link">Rehearsals &amp; Engagements</a></li>
+      <li><a href="spaces.html" class="mobile-nav-link">Spaces &amp; Capacities</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="packages.html" class="mobile-nav-link">Celebration Packages</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link">Interactive Estimator</a></li>
+      <li><a href="about.html" class="mobile-nav-link text-gold">Our Story</a></li>
+      <li><a href="blog.html" class="mobile-nav-link">Etiquette &amp; Journal</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact &amp; Tours</a></li>
+      <li><a href="dashboard.html" class="mobile-nav-link">Client RSVP Dashboard</a></li>
+      <li><a href="admin.html" class="mobile-nav-link">Venue Admin Portal</a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <button class="btn btn-primary w-full" data-open-modal="quick-tour">Schedule Private Tasting</button>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.5rem;">
+        <span style="font-size:0.85rem; color:var(--text-muted);">Text Direction</span>
+        <button class="rtl-pill" data-action="toggle-rtl">
+          <span class="rtl-btn-text">RTL</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main-content" class="site-main">
+
+    <!-- Page Title Header / Hero -->
+    <section class="page-hero" aria-label="About The Rosewood Heritage">
+      <div class="page-hero-bg">
+        <img src="assets/images/story-hero.jpg" alt="Intimate candlelit rehearsal dinner gathering inside the historic Rosewood botanical glasshouse conservatory at twilight">
+      </div>
+      <div class="page-hero-overlay"></div>
+      <div class="container page-hero-content reveal">
+        <div class="eyebrow">A Century of Botanical Romance &amp; Heartfelt Gatherings</div>
+        <h1>The Night Before Deserves Its Own Sanctuary</h1>
+        <div class="floral-divider">
+          <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+        </div>
+        <p class="lead-text">
+          Weddings are grand celebrations for the world. But the rehearsal dinner is where the real intimacy lives—where toasts bring tears, laughter lingers across candlelit tables, and two families truly become one.
+        </p>
+      </div>
+    </section>
+
+    <!-- The Origin Story: Born From Real Experience -->
+    <section class="section">
+      <div class="container">
+        <div class="hero-split-grid" style="align-items:center;">
+          <div class="reveal">
+            <div class="eyebrow">Our Origin</div>
+            <h2>We Built the Sanctuary We Wished We Had for Our Own Rehearsal</h2>
+            <div class="floral-divider" style="justify-content:flex-start; margin-bottom:var(--space-6);">
+              <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+            </div>
+            <p>
+              In autumn 2017, founders Eleanor &amp; Marcus Vance were planning their own wedding weekend. They dreamed of an unhurried rehearsal dinner: a candlelit room where Marcus’s 84-year-old grandmother could converse without competing against kitchen clatter, where their blended families could actually bond over reserve wine, and where toasts didn't come with an expiration time.
+            </p>
+            <p>
+              Instead, they encountered the same dilemma every couple faces: either cramped restaurant backrooms with noisy busboys and strict 2-hour dining caps, or cavernous hotel ballrooms that felt sterile and impersonal.
+            </p>
+            <blockquote style="margin:var(--space-6) 0; padding-inline-start:var(--space-6); border-inline-start:3px solid var(--accent-gold); font-family:var(--font-serif); font-size:1.15rem; font-style:italic; color:var(--text-primary);">
+              “We walked into the cool night air feeling rushed and thought: why is the most emotionally charged evening of the wedding treated like an appetizer? The night before should be a warm hearth, not a countdown clock.”
+            </blockquote>
+            <p>
+              That realization became a four-year restoration mission. When they discovered the forgotten 1912 winter conservatory estate tucked into the Hudson Valley hillside, they knew they had found the sanctuary.
+            </p>
+            <div style="margin-top:var(--space-6); display:flex; flex-wrap:wrap; gap:var(--space-8);">
+              <div>
+                <span class="font-serif" style="font-size:2.5rem; font-weight:700; color:var(--accent-gold); display:block; line-height:1;">1912</span>
+                <span style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase;">Botanical Glasshouse Built</span>
+              </div>
+              <div>
+                <span class="font-serif" style="font-size:2.5rem; font-weight:700; color:var(--accent-gold); display:block; line-height:1;">1 Night</span>
+                <span style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase;">1 Couple Sole Exclusivity</span>
+              </div>
+              <div>
+                <span class="font-serif" style="font-size:2.5rem; font-weight:700; color:var(--accent-gold); display:block; line-height:1;">450+</span>
+                <span style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase;">Intimate Evenings Hosted</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual-card-wrapper reveal delay-200">
+            <div class="hero-media-frame">
+              <img src="assets/images/founders.jpg" alt="Eleanor &amp; Marcus Vance, Estate Stewards and Founders of The Rosewood Glasshouse" class="hero-img-showcase" style="aspect-ratio:3/4;">
+            </div>
+            <div class="hero-feature-banner">
+              <div class="banner-top-row">
+                <div class="feature-banner-badge">
+                  <span class="pulsing-status-dot" aria-hidden="true"></span>
+                  <span class="badge-animated-text">Estate Stewards</span>
+                </div>
+                <span class="live-sparkle" aria-hidden="true">✦</span>
+              </div>
+              <div class="feature-banner-text">
+                <div class="banner-title-row">
+                  <strong class="banner-headline">Eleanor &amp; Marcus Vance</strong>
+                </div>
+                <div class="banner-accent-line" aria-hidden="true"></div>
+                <div class="banner-subtext">
+                  <span class="highlight-shimmer-tag"><span class="subtext-pill-dot" aria-hidden="true"></span>Preserving a century</span>
+                  <span class="subtext-body">of Hudson Valley botanical romance for every family milestone.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Rehearsal Dinners Matter: The 3 Emotional Truths -->
+    <section class="section section-warm">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">Our Guiding Truths</div>
+          <h2>What Makes the Night Before Irreplaceable</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+          <p>We designed every square foot of The Rosewood around the real, vulnerable human dynamics of milestone gatherings.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card reveal" style="padding:var(--space-8);">
+            <div style="width:52px; height:52px; border-radius:50%; background:rgba(212,175,55,0.15); color:var(--accent-gold); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin-bottom:var(--space-5);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Your Inner Circle Deserves Time</h3>
+            <p style="font-size:0.95rem; line-height:1.65; color:var(--text-secondary);">
+              On your wedding day, 200 guests means an average of 45 fleeting seconds per person. The rehearsal dinner is your only window of four unhurried hours to sit across from your college roommates, hug cousins who flew across continents, and share memories that don't need a loudspeaker.
+            </p>
+          </div>
+
+          <div class="card reveal delay-100" style="padding:var(--space-8);">
+            <div style="width:52px; height:52px; border-radius:50%; background:rgba(212,175,55,0.15); color:var(--accent-gold); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin-bottom:var(--space-5);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            </div>
+            <h3>Toasts Need Room to Breathe</h3>
+            <p style="font-size:0.95rem; line-height:1.65; color:var(--text-secondary);">
+              The funniest, most tear-inducing stories never happen during the 4-minute wedding reception limit. Here, toasts are conversational rituals. With our acoustic engineering hidden behind historic oak beams, whispers carry warmth and laughter doesn't turn into a wall of reverb.
+            </p>
+          </div>
+
+          <div class="card reveal delay-200" style="padding:var(--space-8);">
+            <div style="width:52px; height:52px; border-radius:50%; background:rgba(212,175,55,0.15); color:var(--accent-gold); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin-bottom:var(--space-5);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Strict Single-Event Exclusivity</h3>
+            <p style="font-size:0.95rem; line-height:1.65; color:var(--text-secondary);">
+              We never run a "second seating" or host two parties at once. The walled gardens, candlelit glasshouse conservatory, and subterranean cellar lounge belong solely to your family for the entire evening. When you arrive, the gates close to the world.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Heritage Timeline -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">A Century in Bloom</div>
+          <h2>The Journey of The Rosewood Estate</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+          <p>From an eccentric botanical conservatory to New York’s most cherished rehearsal dinner haven.</p>
+        </div>
+
+        <div class="timeline-vertical">
+          <!-- 1912 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker">1912</div>
+            <div class="timeline-card">
+              <div class="timeline-time">The Founding</div>
+              <h4>Horticultural Winter Garden Commissioned</h4>
+              <p>
+                Industrialist and botanist Arthur Van Der Bilt commissions European glassmakers to build a private glasshouse on his Hudson Valley hilltop. Hand-rolled Belgian glass transoms and iron fretwork are transported by river barge to house rare orchids, night-blooming jasmine, and winter citrus.
+              </p>
+            </div>
+          </div>
+
+          <!-- 1948 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker">1948</div>
+            <div class="timeline-card">
+              <div class="timeline-time">The Subterranean Vault</div>
+              <h4>The Limestone Wine Cellar is Excavated</h4>
+              <p>
+                Beneath the veranda terrace, an 800-bottle barrel cellar and tasting grotto are hand-carved from native bluestone and field brick, providing natural 56°F temperature control for seasonal cider pressings and French vintages.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2017 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker">2017</div>
+            <div class="timeline-card">
+              <div class="timeline-time">The Discovery</div>
+              <h4>Eleanor &amp; Marcus Find the Overgrown Gem</h4>
+              <p>
+                Following their own frustrating search for an intimate pre-wedding dinner venue, the Vance family discovers the estate. Though dormant for decades, the soaring glass arches, weeping wisteria, and brick courtyards remain structurally intact.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2018-2021 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker">2018</div>
+            <div class="timeline-card">
+              <div class="timeline-time">The Restoration</div>
+              <h4>A Four-Year Architectural Renaissance</h4>
+              <p>
+                Over 1,400 historic glass panels are lovingly restored. Radiant in-floor stone heating is installed for cozy winter events, whisper-quiet acoustic baffles are woven into the historic ceiling ironwork, and a state-of-the-art scratch culinary kitchen is built behind the conservatory.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2022 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker">2022</div>
+            <div class="timeline-card">
+              <div class="timeline-time">The First Evening</div>
+              <h4>Our First Rehearsal Dinner Under the Stars</h4>
+              <p>
+                Forty-two guests gather for an October rehearsal dinner. Candlelight flickers against autumn glass, the cellar fire burns bright, and the couple stays late into the night sharing stories around the courtyard fire pits.
+              </p>
+            </div>
+          </div>
+
+          <!-- Today -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker">Today</div>
+            <div class="timeline-card" style="border-color:var(--accent-gold); background:var(--bg-surface-warm);">
+              <div class="timeline-time" style="color:var(--accent-gold);">Present Day</div>
+              <h4>450+ Celebrations &amp; Still Dedicated to One Couple at a Time</h4>
+              <p>
+                Voted Best Rehearsal Dinner Venue in New York State by The Knot and featured in Vogue Weddings, our promise remains unwavering: one celebration per evening, uncompromised culinary craft, and genuine human connection.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- A Day in the Life: Behind the Scenes -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow" style="color:var(--accent-gold);">Behind the Scenes</div>
+          <h2 style="color:#FFF;">A Day of Craft Before Your First Guest Arrives</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+          <p style="color:rgba(255,255,255,0.8);">We dedicate an entire 12-hour day of meticulous preparation to every single evening we host.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card reveal" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#FFF; padding:var(--space-6);">
+            <div style="font-size:0.8rem; font-weight:700; color:var(--accent-gold); text-transform:uppercase; margin-bottom:var(--space-2);">9:00 AM</div>
+            <h4 style="color:#FFF; margin-bottom:var(--space-3);">Hudson Valley Farm Harvest</h4>
+            <p style="font-size:0.875rem; color:rgba(255,255,255,0.75);">Chef Julien receives morning heirloom vegetables, wild rosemary, and artisanal cheeses delivered from farms within 25 miles of the estate.</p>
+          </div>
+
+          <div class="card reveal delay-100" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#FFF; padding:var(--space-6);">
+            <div style="font-size:0.8rem; font-weight:700; color:var(--accent-gold); text-transform:uppercase; margin-bottom:var(--space-2);">1:00 PM</div>
+            <h4 style="color:#FFF; margin-bottom:var(--space-3);">Tablescape &amp; Floral Architecture</h4>
+            <p style="font-size:0.875rem; color:rgba(255,255,255,0.75);">Clara presses Belgian flax linens, places personalized calligraphy name cards, and designs low floral runners that allow guests to see across the table.</p>
+          </div>
+
+          <div class="card reveal delay-200" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#FFF; padding:var(--space-6);">
+            <div style="font-size:0.8rem; font-weight:700; color:var(--accent-gold); text-transform:uppercase; margin-bottom:var(--space-2);">4:00 PM</div>
+            <h4 style="color:#FFF; margin-bottom:var(--space-3);">Sound, Light &amp; Wine Decanting</h4>
+            <p style="font-size:0.875rem; color:rgba(255,255,255,0.75);">Sommelier Antoine uncorks and decants the evening’s reserve vintages. Genevieve tests wireless speech microphones and sets warm candlelight levels.</p>
+          </div>
+
+          <div class="card reveal delay-300" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#FFF; padding:var(--space-6);">
+            <div style="font-size:0.8rem; font-weight:700; color:var(--accent-gold); text-transform:uppercase; margin-bottom:var(--space-2);">6:00 PM</div>
+            <h4 style="color:#FFF; margin-bottom:var(--space-3);">The Doors Open &amp; You Exhale</h4>
+            <p style="font-size:0.875rem; color:rgba(255,255,255,0.75);">The private shuttle rolls up the tree-lined driveway. Champagne flutes are handed out, soft music floats into the garden, and your night begins.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real Stories From Our Tables (Relatable Experiences) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">Real Table Moments</div>
+          <h2>Stories We Will Never Forget</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+          <p>The true magic of The Rosewood lives in the moments that happen between courses.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Story 1 -->
+          <div class="card card-testimonial reveal">
+            <div class="star-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              “Our wedding the next day had 220 guests and was a whirlwind. But our Rosewood rehearsal dinner with 46 people is the memory we talk about most. Watching David’s dad and my mom sharing stories by the fire pits with glasses of Cabernet was everything we ever wanted.”
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Maya & David" class="author-avatar">
+              <div>
+                <div style="font-weight:700; font-size:0.95rem;">Maya &amp; David S.</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Rehearsal Dinner · 46 Guests · Manhattan, NY</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 2 -->
+          <div class="card card-testimonial reveal delay-100">
+            <div class="star-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              “Bringing our two families together across two cultures was something we were quietly nervous about. Genevieve and Chef Julien created a family-style meal bridging Colombian classics and Hudson Valley flavors. Within 20 minutes, everyone was laughing and toasting like old friends.”
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Carlos & Julian" class="author-avatar">
+              <div>
+                <div style="font-weight:700; font-size:0.95rem;">Carlos &amp; Julian R.</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Rehearsal Celebration · 64 Guests · Boston, MA</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story 3 -->
+          <div class="card card-testimonial reveal delay-200">
+            <div class="star-rating">★★★★★</div>
+            <p class="testimonial-quote">
+              “As the mother of the groom hosting from 800 miles away, I was losing sleep over logistics. Genevieve took every worry off my shoulders. My mother-in-law had a comfortable velvet armchair, every dietary allergy was handled invisibly, and we felt like honored guests in a private home.”
+            </p>
+            <div class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80" alt="Brenda Thorne" class="author-avatar">
+              <div>
+                <div style="font-weight:700; font-size:0.95rem;">Brenda Thorne</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Mother of the Groom Host · 52 Guests · Chicago, IL</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Culinary & Hospitality Team Profiles -->
+    <section class="section section-warm">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">The Artisans</div>
+          <h2>Meet Your Dedicated Celebration Team</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+          <p>Each milestone evening at The Rosewood is curated by seasoned hospitality professionals dedicated entirely to your vision.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <!-- Member 1 -->
+          <div class="card reveal" style="padding:var(--space-6); text-align:center;">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=400&q=80" alt="Chef Julien Beauchamp" class="rounded-lg" style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin:0 auto var(--space-4); border:3px solid var(--accent-gold);">
+            <h4>Chef Julien Beauchamp</h4>
+            <div style="font-size:0.8rem; color:var(--accent-rose); font-weight:700; text-transform:uppercase; margin-bottom:var(--space-2);">Executive Culinary Director</div>
+            <p style="font-size:0.875rem; margin-bottom:var(--space-3);">Trained in Lyon and formerly at Le Bernardin, Julien crafts scratch menus honoring Hudson Valley farms and family food memories.</p>
+            <div style="font-size:0.8rem; font-style:italic; color:var(--text-muted); border-top:1px dashed var(--border-color); padding-top:var(--space-2);">“Food at a rehearsal dinner should feel like the most luxurious Sunday family supper you’ve ever had.”</div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="card reveal delay-100" style="padding:var(--space-6); text-align:center;">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Genevieve Moreau" class="rounded-lg" style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin:0 auto var(--space-4); border:3px solid var(--accent-gold);">
+            <h4>Genevieve Moreau</h4>
+            <div style="font-size:0.8rem; color:var(--accent-rose); font-weight:700; text-transform:uppercase; margin-bottom:var(--space-2);">Head Event Director &amp; Concierge</div>
+            <p style="font-size:0.875rem; margin-bottom:var(--space-3);">With 12+ years in luxury hospitality, Genevieve ensures run-of-shows, speech schedules, and family requests flow seamlessly.</p>
+            <div style="font-size:0.8rem; font-style:italic; color:var(--text-muted); border-top:1px dashed var(--border-color); padding-top:var(--space-2);">“My favorite moment is right after the first toast, when the couple’s shoulders drop and they realize they can finally relax.”</div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="card reveal delay-200" style="padding:var(--space-6); text-align:center;">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Antoine Laurent" class="rounded-lg" style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin:0 auto var(--space-4); border:3px solid var(--accent-gold);">
+            <h4>Antoine Laurent</h4>
+            <div style="font-size:0.8rem; color:var(--accent-rose); font-weight:700; text-transform:uppercase; margin-bottom:var(--space-2);">Master Sommelier</div>
+            <p style="font-size:0.875rem; margin-bottom:var(--space-3);">Antoine curates our 800-bottle subterranean vault, pairing biodynamic Burgundies, local vintages, and celebratory champagnes.</p>
+            <div style="font-size:0.8rem; font-style:italic; color:var(--text-muted); border-top:1px dashed var(--border-color); padding-top:var(--space-2);">“A great wine pairing shouldn’t feel intimidating—it should unlock stories around the table.”</div>
+          </div>
+
+          <!-- Member 4 -->
+          <div class="card reveal delay-300" style="padding:var(--space-6); text-align:center;">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="Clara Hawthorne" class="rounded-lg" style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin:0 auto var(--space-4); border:3px solid var(--accent-gold);">
+            <h4>Clara Hawthorne</h4>
+            <div style="font-size:0.8rem; color:var(--accent-rose); font-weight:700; text-transform:uppercase; margin-bottom:var(--space-2);">Resident Tablescape Artisan</div>
+            <p style="font-size:0.875rem; margin-bottom:var(--space-3);">Clara designs lush, non-intrusive centerpiece runners, botanical arches, and personalized calligraphy placecards.</p>
+            <div style="font-size:0.8rem; font-style:italic; color:var(--text-muted); border-top:1px dashed var(--border-color); padding-top:var(--space-2);">“I always keep centerpieces low and fragrance gentle, so laughter and eye contact travel uninterrupted.”</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values / Commitments to Every Family -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow">Our Promises</div>
+          <h2>Hospitality Without Pretense or Compromise</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card reveal" style="padding:var(--space-6);">
+            <h4>Generational Accessibility</h4>
+            <p style="font-size:0.9rem; color:var(--text-secondary); margin-top:var(--space-2);">
+              Every corner of the conservatory and veranda offers zero-threshold step-free access, wide paths, and quiet velvet seating alcoves so elderly family members feel revered and comfortable all evening.
+            </p>
+          </div>
+
+          <div class="card reveal delay-100" style="padding:var(--space-6);">
+            <h4>Dietary Empathy</h4>
+            <p style="font-size:0.9rem; color:var(--text-secondary); margin-top:var(--space-2);">
+              Vegan, celiac, kosher-style, or halal dietary needs are never treated as an inconvenience. Chef Julien prepares custom courses with equal artistry so no guest feels singled out or under-catered.
+            </p>
+          </div>
+
+          <div class="card reveal delay-200" style="padding:var(--space-6);">
+            <h4>Stewardship of the Valley</h4>
+            <p style="font-size:0.9rem; color:var(--text-secondary); margin-top:var(--space-2);">
+              We operate a 100% composted kitchen, zero single-use plastics, estate honey beehives, and bird-friendly restored glass to protect migrating Hudson River birds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-warm">
+      <div class="container container-narrow">
+        <div class="section-header reveal">
+          <div class="eyebrow">Host Inquiries</div>
+          <h2>Questions Couples &amp; Parents Often Ask Us</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+          <p>Everything you need to know about celebrating your milestone evening at The Rosewood.</p>
+        </div>
+
+        <div class="faq-accordion reveal">
+          <!-- Item 1 -->
+          <div class="faq-item is-open">
+            <button class="faq-question" aria-expanded="true">
+              <span>Why do you specialize in rehearsal dinners rather than 300-person weddings?</span>
+              <span class="faq-icon-arrow">
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0h10L5 6z"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                We believe the most poignant, heartfelt moments in human relationships occur in rooms of 30 to 85 people. Giant wedding ballrooms can turn dinner into a production line. By dedicating our estate exclusively to intimate pre-wedding dinners and milestone celebrations, we can pour obsessive attention into every guest, course, and toast.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What happens if toasts run longer than planned? Will we be hurried?</span>
+              <span class="faq-icon-arrow">
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0h10L5 6z"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Never. Because we only host one event per evening, our kitchen operates on your rhythm, not a strict clock. If an uncle’s speech has everyone in tears, Chef Julien holds the entrée course in warm convection until the applause ends. You will never feel a waiter hovering to turn the table.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can we incorporate our own family recipes or cultural traditions?</span>
+              <span class="faq-icon-arrow">
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0h10L5 6z"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                We actively encourage it. We’ve collaborated with couples to recreate grandmother’s pasta sauce, incorporated traditional tea ceremonies in the cellar lounge, and arranged late-night churro carts on the courtyard. Your rehearsal dinner should tell your family’s story.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How does planning work for out-of-town hosts?</span>
+              <span class="faq-icon-arrow">
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0h10L5 6z"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                More than 65% of our host couples and parents live in New York City, New Jersey, Boston, or further afield. Through our online Couple Dashboard, high-definition video walkthroughs, and tasting appointments, we handle all vendor coordination, floor plans, and schedules so you arrive as relaxed as your guests.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards & Honors -->
+    <section class="section">
+      <div class="container text-center">
+        <div class="section-header reveal">
+          <div class="eyebrow">Industry Recognition</div>
+          <h2>Celebrated Across the Northeast</h2>
+          <div class="floral-divider">
+            <img src="assets/images/floral-divider.svg" alt="Decorative Divider">
+          </div>
+        </div>
+
+        <div class="grid grid-3 reveal">
+          <div class="card" style="padding:var(--space-6);">
+            <div class="text-gold" style="font-size:1.8rem; font-family:var(--font-serif); font-weight:700; margin-bottom:0.5rem;">The Knot Best of Weddings</div>
+            <div style="font-size:0.85rem; color:var(--text-muted); font-weight:600;">Hall of Fame Recipient · 2023, 2024, 2025</div>
+            <p style="margin-top:0.75rem; font-size:0.9rem;">Voted Best Rehearsal Dinner &amp; Intimate Celebration Venue in New York State by over 300 verified couples.</p>
+          </div>
+
+          <div class="card" style="padding:var(--space-6);">
+            <div class="text-gold" style="font-size:1.8rem; font-family:var(--font-serif); font-weight:700; margin-bottom:0.5rem;">Vogue Weddings</div>
+            <div style="font-size:0.85rem; color:var(--text-muted); font-weight:600;">Top 10 Romantic Glasshouses in America</div>
+            <p style="margin-top:0.75rem; font-size:0.9rem;">Featured for its restoration, candlelit architectural splendor, and fine dining mastery under the stars.</p>
+          </div>
+
+          <div class="card" style="padding:var(--space-6);">
+            <div class="text-gold" style="font-size:1.8rem; font-family:var(--font-serif); font-weight:700; margin-bottom:0.5rem;">Wine Spectator</div>
+            <div style="font-size:0.85rem; color:var(--text-muted); font-weight:600;">Award of Excellence · 2024 &amp; 2025</div>
+            <p style="margin-top:0.75rem; font-size:0.9rem;">Recognized for our subterranean vintage vault and tailored food-and-wine pairings for private banquet dining.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Warm Call to Action -->
+    <section class="section section-dark" style="text-align:center;">
+      <div class="container container-narrow reveal">
+        <div class="eyebrow" style="color:var(--accent-gold);">Private Invitation</div>
+        <h2>Come Walk the Glasshouse With Us</h2>
+        <p class="lead-text" style="margin-bottom:var(--space-8); color:rgba(255,255,255,0.85);">
+          Let us pour you a glass of wine, show you the light filtering through the Belgian glass transoms, and talk about the people who matter most to you.
+        </p>
+        <button class="btn btn-secondary btn-lg" data-open-modal="quick-tour">Schedule an In-Person Walkthrough &amp; Tasting</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand-logo" style="color:#FFF;">
+            <img src="assets/images/logo-monogram.svg" alt="Rosewood Logo" width="40" height="40">
+            <div class="brand-words">
+              <span class="brand-name" style="color:#FFF;">The Rosewood</span>
+              <span class="brand-tagline" style="color:var(--accent-gold);">Glasshouse &amp; Atrium</span>
+            </div>
+          </a>
+          <p class="footer-brand-p">
+            An intimate estate venue dedicated to romantic rehearsal dinners, engagement soirées, and elevated private dining celebrations.
+          </p>
+          <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:0.35rem; font-size:0.85rem; color:rgba(255,255,255,0.7);">
+            <span>428 Rosewood Estate Lane, Hudson Valley, NY 12572</span>
+            <span>Direct Concierge: +1 (845) 555-0194</span>
+          </div>
+        </div>
+
+        <div>
+          <h4>Spaces &amp; Dining</h4>
+          <ul class="footer-nav-list">
+            <li><a href="spaces.html#glasshouse-conservatory">The Glasshouse Conservatory</a></li>
+            <li><a href="spaces.html#cellar-lounge">Rosewood Cellar &amp; Lounge</a></li>
+            <li><a href="spaces.html#veranda-courtyard">Veranda &amp; Walled Courtyard</a></li>
+            <li><a href="spaces.html#grand-solarium">Grand Solarium Dining Hall</a></li>
+            <li><a href="service-details.html">Chef Tasting Menus</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Couple Resources</h4>
+          <ul class="footer-nav-list">
+            <li><a href="home-celebrations.html">Rehearsal Dinners Guide</a></li>
+            <li><a href="packages.html">Celebration Packages</a></li>
+            <li><a href="pricing.html">Cost Estimator</a></li>
+            <li><a href="dashboard.html">Client Couple Portal</a></li>
+            <li><a href="admin.html">Venue Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>The Seasonal Journal</h4>
+          <p>Receive private invitations, seasonal menu previews, and rehearsal dinner etiquette notes.</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email Address">
+            <button type="submit" class="btn btn-secondary btn-sm">Join</button>
+          </form>
+          <div class="social-links" style="margin-top:1.5rem;">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link social-instagram" aria-label="Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link social-x" aria-label="X (formerly Twitter)" title="X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link social-facebook" aria-label="Facebook" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 The Rosewood Glasshouse &amp; Atrium. All rights reserved.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms of Booking</a>
+          <a href="contact.html">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick Tour Modal -->
+  <div class="modal-backdrop" id="quick-tour-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" data-close-modal>&times;</button>
+      <div class="eyebrow" style="color:var(--accent-rose);">Private Tour</div>
+      <h3>Schedule Your Estate Visit</h3>
+      <form id="quick-tour-form" novalidate style="margin-top:1.5rem;">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-control" required placeholder="Your name" pattern="^[A-Za-z\s\.\'\,\-&]+$" title="Names must contain letters only (no numbers)">
+          <div class="form-error"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" class="form-control" required placeholder="email@domain.com">
+          <div class="form-error"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Preferred Date</label>
+          <input type="date" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-full">Request Private Tour</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/data.js?v=11"></script>
+  <!-- Animation Engines -->
+  <script src="js/gsap.min.js?v=1"></script>
+  <script src="js/ScrollTrigger.min.js?v=1"></script>
+  <script src="js/main.js?v=18"></script>
+  <script src="js/forms.js?v=12"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFBF85"/>
+      <stop offset="50%" stop-color="#C8A265"/>
+      <stop offset="100%" stop-color="#9E783B"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer subtle ring -->
+  <circle cx="50" cy="50" r="46" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.8"/>
+  <circle cx="50" cy="50" r="42" fill="none" stroke="url(#goldGrad)" stroke-width="1"/>
+  <!-- Decorative botanical leaves -->
+  <path d="M50 12 C52 18, 56 20, 50 25 C44 20, 48 18, 50 12 Z" fill="url(#goldGrad)" opacity="0.9"/>
+  <path d="M50 88 C52 82, 56 80, 50 75 C44 80, 48 82, 50 88 Z" fill="url(#goldGrad)" opacity="0.9"/>
+  <path d="M12 50 C18 52, 20 56, 25 50 C20 44, 18 48, 12 50 Z" fill="url(#goldGrad)" opacity="0.9"/>
+  <path d="M88 50 C82 52, 80 56, 75 50 C80 44, 82 48, 88 50 Z" fill="url(#goldGrad)" opacity="0.9"/>
+  <!-- Monogram Lettering: R & A -->
+  <text x="43" y="58" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="28" font-weight="600" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="1">R</text>
+  <text x="57" y="60" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="24" font-style="italic" font-weight="400" fill="#C48292" text-anchor="middle">A</text>
+  <!-- Tiny center diamond star -->
+  <polygon points="50,40 52,43 50,46 48,43" fill="url(#goldGrad)"/>
+</svg>
