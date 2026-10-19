@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="css/main.css?v=13">
-  <link rel="stylesheet" href="css/components.css?v=14">
+  <link rel="stylesheet" href="css/components.css?v=15">
   <link rel="stylesheet" href="css/pages.css?v=15">
   <script>
     (function () {
@@ -95,8 +95,26 @@
     </div>
 
     <ul class="mobile-nav-list">
-      <li><a href="index.html" class="mobile-nav-link">General Venue Home</a></li>
-      <li><a href="home-celebrations.html" class="mobile-nav-link">Rehearsals &amp; Engagements</a></li>
+      <li class="mobile-nav-item has-dropdown">
+        <button class="mobile-nav-link mobile-dropdown-toggle w-full" data-mobile-dropdown-toggle aria-expanded="false">
+          <span>Home</span>
+          <svg class="icon-caret" width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0h10L5 6z"/></svg>
+        </button>
+        <ul class="mobile-submenu">
+          <li>
+            <a href="index.html" class="mobile-subnav-link">
+              <span class="subnav-title">Estate Overview</span>
+              <span class="subnav-desc">General venue overview</span>
+            </a>
+          </li>
+          <li>
+            <a href="home-celebrations.html" class="mobile-subnav-link">
+              <span class="subnav-title">Rehearsals &amp; Engagements</span>
+              <span class="subnav-desc">Niche celebration focus &amp; timelines</span>
+            </a>
+          </li>
+        </ul>
+      </li>
       <li><a href="spaces.html" class="mobile-nav-link">Spaces &amp; Capacities</a></li>
       <li><a href="services.html" class="mobile-nav-link">Services</a></li>
       <li><a href="packages.html" class="mobile-nav-link">Celebration Packages</a></li>
@@ -391,7 +409,7 @@
   <!-- Animation Engines -->
   <script src="js/gsap.min.js?v=1"></script>
   <script src="js/ScrollTrigger.min.js?v=1"></script>
-  <script src="js/main.js?v=18"></script>
+  <script src="js/main.js?v=19"></script>
   <script src="js/forms.js?v=12"></script>
 </body>
 </html>

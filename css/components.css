@@ -682,6 +682,106 @@
   border-color: rgba(194, 155, 88, 0.25);
 }
 
+/* Mobile Submenu Accordion */
+.mobile-nav-item.has-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: start;
+  font-family: inherit;
+  user-select: none;
+}
+
+.mobile-dropdown-toggle .icon-caret {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  color: var(--accent-gold);
+  flex-shrink: 0;
+}
+
+.mobile-dropdown-toggle[aria-expanded="true"] .icon-caret,
+.mobile-dropdown-toggle.is-expanded .icon-caret {
+  transform: rotate(180deg);
+}
+
+.mobile-submenu {
+  display: none;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.4rem 0.35rem 0.4rem 1rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.25rem;
+  border-inline-start: 2px solid rgba(194, 155, 88, 0.35);
+  list-style: none;
+}
+
+.mobile-submenu.is-open {
+  display: flex;
+  animation: submenuSlideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes submenuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-subnav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  text-decoration: none;
+  background: rgba(194, 155, 88, 0.04);
+  border: 1px solid rgba(194, 155, 88, 0.14);
+  transition: all var(--transition-fast);
+}
+
+.mobile-subnav-link:hover {
+  background-color: rgba(194, 155, 88, 0.12);
+  border-color: rgba(194, 155, 88, 0.35);
+  transform: translateX(3px);
+}
+
+.mobile-subnav-link.is-active,
+.mobile-subnav-link.text-gold {
+  background: linear-gradient(135deg, rgba(194, 155, 88, 0.18) 0%, rgba(139, 44, 75, 0.1) 100%);
+  border-color: var(--accent-gold);
+}
+
+.mobile-subnav-link.is-active .subnav-title,
+.mobile-subnav-link.text-gold .subnav-title {
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.subnav-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.subnav-desc {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
 .mobile-drawer-footer {
   margin-top: auto;
   padding-top: var(--space-6);

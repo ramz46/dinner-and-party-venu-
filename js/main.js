@@ -275,14 +275,23 @@
     // Mobile submenu accordion
     const mobileDropdownToggles = drawer.querySelectorAll('[data-mobile-dropdown-toggle]');
     mobileDropdownToggles.forEach(toggle => {
+      const submenu = toggle.nextElementSibling;
+      if (submenu && submenu.classList.contains('is-open')) {
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.classList.add('is-expanded');
+        const icon = toggle.querySelector('.icon-caret');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      }
       toggle.addEventListener('click', (e) => {
         e.preventDefault();
-        const submenu = toggle.nextElementSibling;
+        e.stopPropagation();
         if (submenu) {
           const isOpen = submenu.classList.contains('is-open');
           submenu.classList.toggle('is-open', !isOpen);
+          toggle.classList.toggle('is-expanded', !isOpen);
+          toggle.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
           const icon = toggle.querySelector('.icon-caret');
-          if (icon) icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+          if (icon) icon.style.transform = !isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
         }
       });
     });
