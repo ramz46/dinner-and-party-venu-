@@ -12,9 +12,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="css/main.css?v=12">
-  <link rel="stylesheet" href="css/components.css?v=13">
-  <link rel="stylesheet" href="css/pages.css?v=14">
+  <link rel="stylesheet" href="css/main.css?v=13">
+  <link rel="stylesheet" href="css/components.css?v=14">
+  <link rel="stylesheet" href="css/pages.css?v=15">
 
   <style>
     /* Direct override to guarantee instant update without cache lag */
@@ -143,6 +143,180 @@
       line-height: 1.5 !important;
       margin: 0 !important;
       flex: 1 1 200px !important;
+    }
+
+    /* --------------------------------------------------------------------------
+       Mobile & Small Screen Alignments for Rehearsals & Engagements
+       -------------------------------------------------------------------------- */
+    .hero-split-actions {
+      display: flex;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .hero-split {
+        padding-block: calc(var(--header-height) + var(--space-4)) var(--space-10) !important;
+      }
+      .hero-split-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-6) !important;
+      }
+      .hero-split h1 {
+        font-size: clamp(1.75rem, 5.5vw, 2.35rem) !important;
+        line-height: 1.22 !important;
+        margin-bottom: var(--space-3) !important;
+        overflow-wrap: break-word !important;
+      }
+      .hero-split .lead-text {
+        font-size: 0.98rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: var(--space-5) !important;
+      }
+      .hero-media-frame {
+        border-radius: var(--radius-lg) !important;
+        border-width: 2px !important;
+        width: 100% !important;
+      }
+      .hero-img-showcase {
+        width: 100% !important;
+        aspect-ratio: 16 / 10 !important;
+        object-fit: cover !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      /* Hero CTA Buttons: Stack vertically with full width & perfect alignment */
+      .hero-split-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: var(--space-3) !important;
+        width: 100% !important;
+        margin-bottom: var(--space-6) !important;
+      }
+      .hero-split-actions .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+        white-space: normal !important;
+        padding: 0.85rem 1.25rem !important;
+        font-size: 0.95rem !important;
+      }
+
+      /* Hero Visual Card & Highlights Banner */
+      .hero-visual-card-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: var(--space-3) !important;
+      }
+      .hero-feature-banner {
+        padding: 1rem 1.05rem !important;
+        border-radius: var(--radius-lg) !important;
+        gap: 0.65rem !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .banner-top-row {
+        flex-wrap: wrap !important;
+        gap: 0.45rem !important;
+        align-items: center !important;
+      }
+      .feature-banner-badge {
+        font-size: 0.74rem !important;
+        padding: 0.32rem 0.72rem !important;
+        white-space: normal !important;
+        max-width: 100% !important;
+      }
+      .banner-headline {
+        font-size: 1.05rem !important;
+        line-height: 1.35 !important;
+      }
+      .banner-subtext {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.45rem !important;
+        width: 100% !important;
+      }
+      .highlight-shimmer-tag {
+        font-size: 0.74rem !important;
+        padding: 0.2rem 0.55rem !important;
+        white-space: normal !important;
+      }
+      .subtext-body {
+        font-size: 0.82rem !important;
+        line-height: 1.45 !important;
+        flex: 1 1 auto !important;
+        width: 100% !important;
+      }
+
+      /* Timeline Stepper & Tabs */
+      .tabs-nav {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 0.4rem !important;
+      }
+      .tabs-nav .tab-btn {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+        white-space: normal !important;
+        padding: 0.6rem 0.85rem !important;
+        font-size: 0.85rem !important;
+      }
+      .timeline-item {
+        gap: var(--space-3) !important;
+        padding-bottom: var(--space-6) !important;
+      }
+      .timeline-marker {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 0.95rem !important;
+      }
+      .timeline-stepper:not(.horizontal-stepper)::before {
+        inset-inline-start: 18px !important;
+      }
+      .timeline-card {
+        padding: 1rem 0.95rem !important;
+        border-radius: var(--radius-md) !important;
+      }
+      .timeline-time {
+        font-size: 0.78rem !important;
+      }
+
+      /* Cards & CTAs */
+      .section-dark .btn-lg {
+        width: 100% !important;
+        white-space: normal !important;
+        text-align: center !important;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero-split h1 {
+        font-size: 1.55rem !important;
+      }
+      .hero-split .lead-text {
+        font-size: 0.9rem !important;
+      }
+      .hero-feature-banner {
+        padding: 0.85rem 0.75rem !important;
+      }
+      .feature-banner-badge {
+        font-size: 0.7rem !important;
+        padding: 0.28rem 0.55rem !important;
+      }
+      .banner-headline {
+        font-size: 0.98rem !important;
+      }
+      .highlight-shimmer-tag {
+        font-size: 0.7rem !important;
+      }
+      .hero-split-actions .btn {
+        font-size: 0.85rem !important;
+        padding: 0.75rem 1rem !important;
+      }
     }
   </style>
   <script>
@@ -281,7 +455,7 @@
             <p class="lead-text" style="margin-bottom:var(--space-8);">
               Before the grand wedding day arrives, savor an unhurried evening enveloped in candlelight. At The Rosewood, we specialize in the warmth of intimate dining, emotional family toasts, and handcrafted seasonal menus.
             </p>
-            <div class="flex gap-4 flex-wrap">
+            <div class="hero-split-actions hero-cta-group">
               <button class="btn btn-primary btn-lg" data-open-modal="quick-tour">Inquire for Your Date</button>
               <a href="#sample-timelines" class="btn btn-outline btn-lg">Explore Sample Timelines</a>
             </div>
@@ -352,7 +526,7 @@
               </li>
             </ul>
             <div style="margin-top:var(--space-6);">
-              <a href="packages.html#twilight-rehearsal" class="btn btn-primary btn-sm">Explore Rehearsal Package &rarr;</a>
+              <a href="packages.html#twilight-rehearsal" class="btn btn-primary btn-sm w-full">Explore Rehearsal Package &rarr;</a>
             </div>
           </div>
 
@@ -378,7 +552,7 @@
               </li>
             </ul>
             <div style="margin-top:var(--space-6);">
-              <a href="packages.html#golden-engagement" class="btn btn-secondary btn-sm">Explore Engagement Package &rarr;</a>
+              <a href="packages.html#golden-engagement" class="btn btn-secondary btn-sm w-full">Explore Engagement Package &rarr;</a>
             </div>
           </div>
         </div>
@@ -592,7 +766,7 @@
         </div>
 
         <div class="text-center" style="margin-top:var(--space-10);">
-          <a href="pricing.html" class="btn btn-outline-gold">Try the Interactive Pricing &amp; Guest Calculator &rarr;</a>
+          <a href="pricing.html" class="btn btn-outline-gold" style="max-width:100%; white-space:normal; text-align:center;">Try the Interactive Pricing &amp; Guest Calculator &rarr;</a>
         </div>
       </div>
     </section>
@@ -605,7 +779,7 @@
         <p class="lead-text" style="margin-bottom:var(--space-8);">
           Let our experienced team take care of every detail so you can simply revel in the joy of your engagement or rehearse in calm luxury.
         </p>
-        <button class="btn btn-secondary btn-lg" data-open-modal="quick-tour">Schedule an In-Person Walkthrough</button>
+        <button class="btn btn-secondary btn-lg" data-open-modal="quick-tour" style="max-width:100%; white-space:normal; text-align:center;">Schedule an In-Person Walkthrough</button>
       </div>
     </section>
 
