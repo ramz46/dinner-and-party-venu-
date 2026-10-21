@@ -153,15 +153,18 @@
       gap: var(--space-4);
       flex-wrap: wrap;
       align-items: center;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
     }
 
     @media (max-width: 768px) {
       .hero-split {
-        padding-block: calc(var(--header-height) + var(--space-4)) var(--space-10) !important;
+        padding-block: calc(var(--header-height) + var(--space-4)) var(--space-8) !important;
       }
       .hero-split-grid {
         grid-template-columns: 1fr !important;
-        gap: var(--space-6) !important;
+        gap: var(--space-5) !important;
       }
       .hero-split h1 {
         font-size: clamp(1.75rem, 5.5vw, 2.35rem) !important;
@@ -172,7 +175,7 @@
       .hero-split .lead-text {
         font-size: 0.98rem !important;
         line-height: 1.6 !important;
-        margin-bottom: var(--space-5) !important;
+        margin-bottom: var(--space-4) !important;
       }
       .hero-media-frame {
         border-radius: var(--radius-lg) !important;
@@ -194,7 +197,10 @@
         align-items: stretch !important;
         gap: var(--space-3) !important;
         width: 100% !important;
-        margin-bottom: var(--space-6) !important;
+        margin-bottom: 0 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
       }
       .hero-split-actions .btn {
         width: 100% !important;
@@ -203,6 +209,15 @@
         white-space: normal !important;
         padding: 0.85rem 1.25rem !important;
         font-size: 0.95rem !important;
+      }
+      [data-theme="dark"] .hero-split-actions .btn-outline {
+        border-color: rgba(223, 194, 147, 0.45) !important;
+        color: #FDFBF7 !important;
+      }
+      [data-theme="dark"] .hero-split-actions .btn-outline:hover {
+        border-color: var(--accent-gold) !important;
+        color: var(--accent-gold) !important;
+        background: rgba(223, 194, 147, 0.12) !important;
       }
 
       /* Hero Visual Card & Highlights Banner */
@@ -470,10 +485,10 @@
           <div class="reveal">
             <div class="eyebrow">Intimate Celebrations</div>
             <h1 style="margin-bottom:var(--space-4);">The Prelude to Forever: Rehearsal Dinners &amp; Engagement Soirées</h1>
-            <p class="lead-text" style="margin-bottom:var(--space-8);">
+            <p class="lead-text" style="margin-bottom:var(--space-5);">
               Before the grand wedding day arrives, savor an unhurried evening enveloped in candlelight. At The Rosewood, we specialize in the warmth of intimate dining, emotional family toasts, and handcrafted seasonal menus.
             </p>
-            <div class="hero-split-actions hero-cta-group">
+            <div class="hero-split-actions">
               <button class="btn btn-primary btn-lg" data-open-modal="quick-tour">Inquire for Your Date</button>
               <a href="#sample-timelines" class="btn btn-outline btn-lg">Explore Sample Timelines</a>
             </div>

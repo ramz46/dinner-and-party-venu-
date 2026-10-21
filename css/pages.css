@@ -323,6 +323,8 @@
   gap: var(--space-4);
   flex-wrap: wrap;
   align-items: center;
+  opacity: 1;
+  visibility: visible;
 }
 
 .hero-visual-card-wrapper {
