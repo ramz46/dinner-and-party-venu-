@@ -2460,3 +2460,186 @@ body:hover .cursor-aura {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   Contact & Tours Page Responsive Enhancements
+   ========================================================================== */
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-block: var(--space-8);
+  width: 100%;
+}
+
+.contact-info-item {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  width: 100%;
+}
+
+.contact-icon-pill {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-surface-warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  flex-shrink: 0;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .contact-icon-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(223, 194, 147, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.contact-valet-card {
+  background: var(--bg-surface-warm);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form-card {
+  padding: var(--space-8);
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: var(--radius-xl);
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.map-header-banner {
+  background: linear-gradient(135deg, var(--accent-plum) 0%, #201119 100%);
+  color: #FFF;
+  padding: var(--space-8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.map-canvas-container {
+  position: relative;
+  height: 320px;
+  background-color: #E9E2D8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.map-pin-badge {
+  background: #FFF;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--accent-plum);
+  margin-top: 0.5rem;
+  border: 1px solid var(--border-gold);
+  display: inline-block;
+}
+
+@media (max-width: 992px) {
+  .contact-split-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-8) !important;
+    align-items: stretch !important;
+  }
+  .contact-info-col,
+  .contact-form-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-form-row {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+  .contact-form-card {
+    padding: 1.5rem 1.15rem !important;
+    border-radius: var(--radius-lg) !important;
+  }
+  .contact-items-list {
+    gap: var(--space-4) !important;
+    margin-block: var(--space-5) !important;
+  }
+  .contact-info-item {
+    gap: var(--space-3) !important;
+  }
+  .contact-icon-pill {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  .contact-icon-pill svg {
+    width: 17px !important;
+    height: 17px !important;
+  }
+  .contact-valet-card {
+    padding: 1.15rem 1rem !important;
+  }
+  .map-header-banner {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 1.35rem 1.15rem !important;
+    gap: var(--space-4) !important;
+  }
+  .map-header-banner h3 {
+    font-size: 1.15rem !important;
+    line-height: 1.35 !important;
+    overflow-wrap: break-word !important;
+  }
+  .map-header-banner .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  .map-canvas-container {
+    height: 250px !important;
+  }
+  .map-pin-badge {
+    font-size: 0.78rem !important;
+    padding: 0.35rem 0.75rem !important;
+    max-width: 90% !important;
+    white-space: normal !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .contact-form-card {
+    padding: 1.2rem 0.95rem !important;
+  }
+  .map-header-banner {
+    padding: 1.15rem 0.95rem !important;
+  }
+  .contact-valet-card {
+    padding: 1rem 0.85rem !important;
+  }
+}

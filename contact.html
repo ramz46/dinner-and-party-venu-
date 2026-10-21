@@ -15,6 +15,236 @@
   <link rel="stylesheet" href="css/main.css?v=13">
   <link rel="stylesheet" href="css/components.css?v=15">
   <link rel="stylesheet" href="css/pages.css?v=15">
+
+  <style>
+    /* --------------------------------------------------------------------------
+       Contact & Private Tours - Responsive Layout & Alignment Optimization
+       -------------------------------------------------------------------------- */
+    .contact-split-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: var(--space-12);
+      align-items: start;
+      width: 100%;
+    }
+
+    .contact-info-col {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .contact-items-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+      margin-block: var(--space-8);
+      width: 100%;
+    }
+
+    .contact-info-item {
+      display: flex;
+      gap: var(--space-4);
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .contact-icon-pill {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-surface-warm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+      flex-shrink: 0;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    [data-theme="dark"] .contact-icon-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(223, 194, 147, 0.3);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    }
+
+    .contact-valet-card {
+      background: var(--bg-surface-warm);
+      padding: var(--space-6);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .contact-form-card {
+      padding: var(--space-8);
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: var(--radius-xl);
+    }
+
+    .contact-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+      width: 100%;
+    }
+
+    .map-header-banner {
+      background: linear-gradient(135deg, var(--accent-plum) 0%, #201119 100%);
+      color: #FFF;
+      padding: var(--space-8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .map-canvas-container {
+      position: relative;
+      height: 320px;
+      background-color: #E9E2D8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .map-pin-badge {
+      background: #FFF;
+      padding: 0.4rem 1rem;
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-md);
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--accent-plum);
+      margin-top: 0.5rem;
+      border: 1px solid var(--border-gold);
+      display: inline-block;
+    }
+
+    /* Tablet & Responsive Inspect Mode Breakpoint (<= 992px) */
+    @media (max-width: 992px) {
+      .contact-split-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-8) !important;
+        align-items: stretch !important;
+      }
+      .contact-info-col,
+      .contact-form-card {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+
+    /* Mobile Responsive Inspect Mode Breakpoint (<= 640px) */
+    @media (max-width: 640px) {
+      .page-hero {
+        padding-block: calc(var(--header-height) + var(--space-4)) var(--space-8) !important;
+      }
+      .page-hero h1 {
+        font-size: clamp(1.75rem, 5.5vw, 2.2rem) !important;
+        line-height: 1.25 !important;
+      }
+      .page-hero .lead-text {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+      }
+
+      /* Stack 2-column form rows into single full-width columns */
+      .contact-form-row {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+      }
+
+      /* Tighten Form Card Padding */
+      .contact-form-card {
+        padding: 1.5rem 1.15rem !important;
+        border-radius: var(--radius-lg) !important;
+      }
+      .contact-form-card h3 {
+        font-size: 1.35rem !important;
+      }
+      .contact-form-card .btn-lg {
+        padding: 0.85rem 1.25rem !important;
+        font-size: 0.95rem !important;
+      }
+
+      /* Left Info Items */
+      .contact-items-list {
+        gap: var(--space-4) !important;
+        margin-block: var(--space-5) !important;
+      }
+      .contact-info-item {
+        gap: var(--space-3) !important;
+      }
+      .contact-icon-pill {
+        width: 38px !important;
+        height: 38px !important;
+      }
+      .contact-icon-pill svg {
+        width: 17px !important;
+        height: 17px !important;
+      }
+      .contact-valet-card {
+        padding: 1.15rem 1rem !important;
+      }
+      .contact-valet-card h4 {
+        font-size: 0.98rem !important;
+      }
+      .contact-valet-card p {
+        font-size: 0.84rem !important;
+        line-height: 1.5 !important;
+      }
+
+      /* Map Card Banner & Layout */
+      .map-header-banner {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 1.35rem 1.15rem !important;
+        gap: var(--space-4) !important;
+      }
+      .map-header-banner h3 {
+        font-size: 1.15rem !important;
+        line-height: 1.35 !important;
+        overflow-wrap: break-word !important;
+      }
+      .map-header-banner .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 0.75rem 1.25rem !important;
+      }
+      .map-canvas-container {
+        height: 250px !important;
+      }
+      .map-pin-badge {
+        font-size: 0.78rem !important;
+        padding: 0.35rem 0.75rem !important;
+        max-width: 90% !important;
+        white-space: normal !important;
+      }
+    }
+
+    /* Small Mobile Phones (<= 380px) */
+    @media (max-width: 380px) {
+      .contact-form-card {
+        padding: 1.2rem 0.95rem !important;
+      }
+      .map-header-banner {
+        padding: 1.15rem 0.95rem !important;
+      }
+      .contact-valet-card {
+        padding: 1rem 0.85rem !important;
+      }
+    }
+  </style>
   <script>
     (function () {
       try {
@@ -154,20 +384,20 @@
     <!-- Contact Info & Form Split -->
     <section class="section">
       <div class="container">
-        <div class="hero-split-grid">
+        <div class="hero-split-grid contact-split-grid">
 
           <!-- Left Info Column -->
-          <div class="reveal">
+          <div class="contact-info-col reveal">
             <div class="eyebrow">Concierge &amp; Location</div>
             <h2>We Look Forward to Welcoming You</h2>
             <p>
               The Rosewood Estate is located 90 minutes north of Manhattan along the picturesque Hudson River corridor. Private estate tours and sommelier tastings are offered Tuesday through Sunday by prior appointment.
             </p>
 
-            <div style="display:flex; flex-direction:column; gap:var(--space-6); margin-block:var(--space-8);">
+            <div class="contact-items-list">
               <!-- Item 1 -->
-              <div style="display:flex; gap:var(--space-4); align-items:flex-start;">
-                <div style="width:44px; height:44px; border-radius:50%; background:var(--bg-surface-warm); display:flex; align-items:center; justify-content:center; color:var(--accent-gold); flex-shrink:0; border:1px solid var(--border-color);">
+              <div class="contact-info-item">
+                <div class="contact-icon-pill">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
                 <div>
@@ -177,8 +407,8 @@
               </div>
 
               <!-- Item 2 -->
-              <div style="display:flex; gap:var(--space-4); align-items:flex-start;">
-                <div style="width:44px; height:44px; border-radius:50%; background:var(--bg-surface-warm); display:flex; align-items:center; justify-content:center; color:var(--accent-gold); flex-shrink:0; border:1px solid var(--border-color);">
+              <div class="contact-info-item">
+                <div class="contact-icon-pill">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 </div>
                 <div>
@@ -189,8 +419,8 @@
               </div>
 
               <!-- Item 3 -->
-              <div style="display:flex; gap:var(--space-4); align-items:flex-start;">
-                <div style="width:44px; height:44px; border-radius:50%; background:var(--bg-surface-warm); display:flex; align-items:center; justify-content:center; color:var(--accent-gold); flex-shrink:0; border:1px solid var(--border-color);">
+              <div class="contact-info-item">
+                <div class="contact-icon-pill">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </div>
                 <div>
@@ -201,7 +431,7 @@
             </div>
 
             <!-- Driving Directions Tip -->
-            <div style="background:var(--bg-surface-warm); padding:var(--space-6); border-radius:var(--radius-lg); border:1px solid var(--border-color);">
+            <div class="contact-valet-card">
               <h4 style="font-size:1.05rem; margin-bottom:0.35rem;">Arrival &amp; Valet Notes</h4>
               <p style="font-size:0.875rem; margin:0;">
                 Follow Route 9 north to Rhinebeck. Enter through the iron carriage gates at Mile Marker 14. Complimentary on-site valet will greet your vehicle directly at the front limestone portico.
@@ -210,7 +440,7 @@
           </div>
 
           <!-- Right Form Column -->
-          <div class="card reveal delay-100" style="padding:var(--space-8);">
+          <div class="card contact-form-card reveal delay-100">
             <div class="eyebrow-no-line eyebrow" style="font-size:0.75rem;">Availability &amp; Inquiries</div>
             <h3 style="margin-bottom:var(--space-2);">Send a Private Inquiry</h3>
             <p style="font-size:0.9rem; margin-bottom:var(--space-6);">Fill out the details below and our Head Event Director will respond with date availability and package brochures within 24 hours.</p>
@@ -222,7 +452,7 @@
                 <div class="form-error"></div>
               </div>
 
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-4);">
+              <div class="contact-form-row">
                 <div class="form-group">
                   <label for="contact-email" class="form-label">Email Address *</label>
                   <input type="email" id="contact-email" class="form-control" placeholder="name@example.com" required>
@@ -235,7 +465,7 @@
                 </div>
               </div>
 
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-4);">
+              <div class="contact-form-row">
                 <div class="form-group">
                   <label for="contact-event-type" class="form-label">Celebration Type</label>
                   <select id="contact-event-type" class="form-select">
@@ -279,7 +509,7 @@
     <section class="section section-warm" style="padding-top:0;">
       <div class="container reveal">
         <div class="card" style="overflow:hidden; border:1px solid var(--border-gold);">
-          <div style="background:linear-gradient(135deg, var(--accent-plum) 0%, #201119 100%); color:#FFF; padding:var(--space-8); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:var(--space-4);">
+          <div class="map-header-banner">
             <div>
               <div class="eyebrow" style="color:var(--accent-gold); margin-bottom:0.25rem;">Hudson Valley Estate Map</div>
               <h3 style="color:#FFF; margin:0;">428 Rosewood Estate Lane, Rhinebeck, NY</h3>
@@ -292,7 +522,7 @@
           </div>
 
           <!-- Stylized Map Visual Representation -->
-          <div style="position:relative; height:320px; background-color:#E9E2D8; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+          <div class="map-canvas-container">
             <!-- Subtle SVG Map Grid Background -->
             <svg width="100%" height="100%" style="position:absolute; inset:0; opacity:0.35;">
               <defs>
@@ -311,7 +541,7 @@
               <div style="width:54px; height:54px; border-radius:50%; background:var(--accent-plum); border:3px solid var(--accent-gold); display:flex; align-items:center; justify-content:center; margin:0 auto; box-shadow:0 8px 24px rgba(0,0,0,0.3); animation:pulseGlow 3s infinite;">
                 <img src="assets/images/favicon.svg" alt="Rosewood Pin" width="30" height="30">
               </div>
-              <div style="background:#FFF; padding:0.4rem 1rem; border-radius:var(--radius-full); box-shadow:var(--shadow-md); font-weight:700; font-size:0.85rem; color:var(--accent-plum); margin-top:0.5rem; border:1px solid var(--border-gold);">
+              <div class="map-pin-badge">
                 The Rosewood Estate &amp; Glasshouse
               </div>
             </div>
