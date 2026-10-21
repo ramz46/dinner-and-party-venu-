@@ -2082,7 +2082,8 @@
   form [style*="grid-template-columns: repeat(2, 1fr)"],
   form [style*="grid-template-columns:repeat(2, 1fr)"],
   .form-row,
-  .form-grid-2 {
+  .form-grid-2,
+  .contact-form-row {
     grid-template-columns: 1fr !important;
     gap: var(--space-4) !important;
   }
