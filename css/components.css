@@ -85,6 +85,14 @@
 .brand-words {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: start;
+}
+
+[dir="rtl"] .brand-words {
+  align-items: flex-end;
+  text-align: right;
 }
 
 .brand-name {
@@ -92,8 +100,10 @@
   font-size: 1.45rem;
   font-weight: 600;
   letter-spacing: 0.025em;
-  line-height: 1.1;
+  line-height: 1.15;
   color: #FDFBF7;
+  display: block;
+  white-space: nowrap;
   transition: color var(--transition-fast);
 }
 
@@ -105,9 +115,13 @@
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.24em;
+  line-height: 1.2;
   color: #DFC293;
   font-weight: 700;
-  margin-top: 2px;
+  margin-top: 3px;
+  margin-inline-end: -0.24em;
+  display: block;
+  white-space: nowrap;
 }
 
 /* ==========================================================================
@@ -812,29 +826,7 @@
   }
 }
 
-@media (max-width: 1240px) and (min-width: 1081px) {
-  .header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-  }
-  .nav-menu {
-    gap: 0.1rem;
-    padding: 0.28rem 0.4rem;
-    margin-inline: auto;
-  }
-  .nav-link {
-    padding: 0.36rem 0.6rem;
-    font-size: 0.81rem;
-  }
-  .site-header .btn-primary {
-    padding: 0.48rem 1.05rem;
-    font-size: 0.82rem;
-  }
-}
-
-@media (max-width: 1080px) {
+@media (max-width: 1240px) {
   .site-header .container {
     padding-inline: var(--space-4);
   }
@@ -855,6 +847,10 @@
   .site-header {
     height: 68px;
   }
+  .header-inner {
+    height: 100% !important;
+    min-height: 68px !important;
+  }
   .site-header .container {
     padding-inline: 0.85rem;
   }
@@ -868,13 +864,16 @@
   .brand-logo img {
     width: 34px;
     height: 34px;
+    align-self: center;
   }
   .brand-name {
     font-size: 1.15rem;
+    line-height: 1.15;
   }
   .brand-tagline {
     font-size: 0.58rem;
     letter-spacing: 0.16em;
+    margin-inline-end: -0.16em;
   }
   .header-actions {
     gap: 0.35rem;
