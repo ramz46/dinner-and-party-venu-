@@ -186,6 +186,39 @@ const RosewoodData = {
       image: "assets/images/seated-vs-cocktail-reception.jpg",
       excerpt: "Explore the psychological flow, mingling dynamics, and sensory elements between a communal 4-course banquet and a roaming lounge reception.",
       tags: ["Spaces", "Guest Flow", "Reception Styles"]
+    },
+    {
+      id: "cellar-sommelier-selections",
+      title: "Cellar Sommelier Selections: Pairing Rare Vintages with Multi-Course Feasts",
+      category: "Food & Wine",
+      date: "July 22, 2025",
+      readTime: "6 min read",
+      author: "Antoine Laurent, Lead Sommelier",
+      image: "assets/images/cellar-speakeasy-spirits.jpg",
+      excerpt: "Uncover cellar secrets on decanting vintage Barolo, navigating organic biodynamic pours, and crafting harmony between rich entrées and crisp digestifs.",
+      tags: ["Wine Pairing", "Cellar", "Sommelier", "Vintages", "Dining"]
+    },
+    {
+      id: "atmospheric-candlelight-tablescapes",
+      title: "Atmospheric Candlelight & Table Scapes: Designing an Intimate Evening Glow",
+      category: "Design & Spaces",
+      date: "June 30, 2025",
+      readTime: "8 min read",
+      author: "Clara Hawthorne, Resident Stylist",
+      image: "assets/images/glasshouse-candlelit-dinner.jpg",
+      excerpt: "How custom candelabras, low floral arrangements, and dimmable architectural uplighting transform our Conservatory into a breathless twilight sanctum.",
+      tags: ["Candlelight", "Tablescapes", "Lighting", "Conservatory", "Floral"]
+    },
+    {
+      id: "hosts-guide-to-rehearsal-dinner-speeches",
+      title: "The Host's Guide to Rehearsal Dinner Speeches, Toasts & Welcome Moments",
+      category: "Planning Tips",
+      date: "May 18, 2025",
+      readTime: "5 min read",
+      author: "Genevieve Moreau, Head Event Director",
+      image: "assets/images/veranda-champagne-welcome.jpg",
+      excerpt: "Crafting memorable champagne welcomes, toast sequences, and heartfelt tributes without emotional fatigue or running off schedule.",
+      tags: ["Speeches", "Toasts", "Hosting", "Rehearsal Dinner", "Timelines"]
     }
   ],
 

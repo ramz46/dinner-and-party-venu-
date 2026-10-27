@@ -397,45 +397,230 @@
   // --------------------------------------------------------------------------
   function initBlogFilter() {
     const searchInput = document.getElementById('blog-search');
+    const clearBtn = document.getElementById('blog-search-clear');
+    const statusEl = document.getElementById('blog-search-status');
+    const noResultsEl = document.getElementById('blog-no-results');
+    const noResultsTerm = document.getElementById('no-results-term');
+    const resetBtn = document.getElementById('blog-reset-filters');
     const categoryChips = document.querySelectorAll('[data-blog-category]');
     const blogCards = document.querySelectorAll('.card-blog-item');
+    const suggestedChips = document.querySelectorAll('[data-suggest]');
 
     if (!blogCards.length) return;
 
     let activeCategory = 'all';
 
+    // Normalize text: lowercase, strip punctuation, collapse whitespace
+    function normalize(str) {
+      return (str || '')
+        .toLowerCase()
+        .replace(/[^\w\s]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+    }
+
+    // Stemming variations (singular/plural resilience: e.g. "cocktails" -> "cocktail", "wines" -> "wine")
+    function getWordVariants(word) {
+      const variants = [word];
+      if (word.endsWith('ies') && word.length > 4) {
+        variants.push(word.slice(0, -3) + 'y');
+      } else if (word.endsWith('es') && word.length > 3) {
+        variants.push(word.slice(0, -2));
+      } else if (word.endsWith('s') && word.length > 2) {
+        variants.push(word.slice(0, -1));
+      } else {
+        variants.push(word + 's');
+      }
+      return variants;
+    }
+
+    // Pre-index cards for instant high-performance search
+    const cardIndex = Array.from(blogCards).map(card => {
+      const title = (card.querySelector('.card-title') || {}).textContent || '';
+      const excerpt = (card.querySelector('.card-excerpt') || {}).textContent || '';
+      const category = card.getAttribute('data-category') || '';
+      const tags = card.getAttribute('data-tags') || '';
+      const author = card.getAttribute('data-author') || (card.querySelector('.card-footer') || {}).textContent || '';
+      const meta = (card.querySelector('.card-body > div') || {}).textContent || '';
+
+      const fullCorpus = normalize(`${title} ${excerpt} ${category} ${tags} ${author} ${meta}`);
+
+      return {
+        card,
+        category: category.toLowerCase().trim(),
+        corpus: fullCorpus
+      };
+    });
+
     function filterPosts() {
-      const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
+      const rawQuery = (searchInput ? searchInput.value : '').trim();
+      const normQuery = normalize(rawQuery);
+      const tokens = normQuery.split(/\s+/).filter(Boolean);
 
-      blogCards.forEach(card => {
-        const title = (card.querySelector('.card-title') || {}).textContent || '';
-        const excerpt = (card.querySelector('.card-excerpt') || {}).textContent || '';
-        const category = card.getAttribute('data-category') || '';
+      // Toggle clear button
+      if (clearBtn) {
+        if (rawQuery.length > 0) {
+          clearBtn.classList.add('is-visible');
+        } else {
+          clearBtn.classList.remove('is-visible');
+        }
+      }
 
-        const matchesQuery = !query || title.toLowerCase().includes(query) || excerpt.toLowerCase().includes(query);
-        const matchesCategory = activeCategory === 'all' || category.toLowerCase() === activeCategory.toLowerCase();
+      let visibleCount = 0;
+      let matchesAnyCategoryCount = 0;
+
+      cardIndex.forEach(({ card, category, corpus }) => {
+        // Test query tokens: card matches if EVERY token (or its variants) is present in corpus
+        const matchesQuery = tokens.length === 0 || tokens.every(token => {
+          const variants = getWordVariants(token);
+          return variants.some(v => corpus.includes(v));
+        });
+
+        if (matchesQuery) {
+          matchesAnyCategoryCount++;
+        }
+
+        const matchesCategory = activeCategory === 'all' || category === activeCategory.toLowerCase();
 
         if (matchesQuery && matchesCategory) {
           card.style.display = '';
+          card.classList.add('is-revealed');
+          visibleCount++;
         } else {
           card.style.display = 'none';
         }
       });
+
+      // Update Empty State
+      if (noResultsEl) {
+        if (visibleCount === 0) {
+          noResultsEl.classList.add('is-visible');
+          if (noResultsTerm) {
+            if (rawQuery && activeCategory !== 'all') {
+              noResultsTerm.textContent = `"${rawQuery}" in ${activeCategory}`;
+            } else if (rawQuery) {
+              noResultsTerm.textContent = `"${rawQuery}"`;
+            } else if (activeCategory !== 'all') {
+              noResultsTerm.textContent = `category "${activeCategory}"`;
+            } else {
+              noResultsTerm.textContent = 'your criteria';
+            }
+          }
+        } else {
+          noResultsEl.classList.remove('is-visible');
+        }
+      }
+
+      // Update Live Status Pill
+      if (statusEl) {
+        if (rawQuery.length > 0) {
+          if (visibleCount === 0 && matchesAnyCategoryCount > 0 && activeCategory !== 'all') {
+            statusEl.innerHTML = `No results in <em>${activeCategory}</em>, but <span class="status-count">${matchesAnyCategoryCount}</span> article${matchesAnyCategoryCount > 1 ? 's' : ''} found in other categories. <button type="button" class="btn-link" id="blog-switch-all" style="color:var(--accent-gold); text-decoration:underline; background:none; border:none; cursor:pointer; font-size:inherit; padding:0 0.25rem;">View all categories</button>`;
+            const switchBtn = document.getElementById('blog-switch-all');
+            if (switchBtn) {
+              switchBtn.addEventListener('click', () => {
+                setActiveCategory('all');
+              });
+            }
+          } else if (visibleCount > 0) {
+            statusEl.innerHTML = `Showing <span class="status-count">${visibleCount}</span> of ${cardIndex.length} stories for "<strong>${escapeHtml(rawQuery)}</strong>"`;
+          } else {
+            statusEl.innerHTML = `No stories found for "<strong>${escapeHtml(rawQuery)}</strong>"`;
+          }
+        } else if (activeCategory !== 'all') {
+          statusEl.innerHTML = `Showing <span class="status-count">${visibleCount}</span> stories in <em>${activeCategory}</em>`;
+        } else {
+          statusEl.innerHTML = `Showing all <span class="status-count">${cardIndex.length}</span> curated journal stories`;
+        }
+      }
     }
 
+    function escapeHtml(str) {
+      return (str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function setActiveCategory(cat) {
+      activeCategory = cat;
+      categoryChips.forEach(chip => {
+        const chipCat = chip.getAttribute('data-blog-category') || 'all';
+        const isActive = chipCat.toLowerCase() === cat.toLowerCase();
+        chip.classList.toggle('is-active', isActive);
+        chip.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      filterPosts();
+    }
+
+    function resetAll() {
+      if (searchInput) {
+        searchInput.value = '';
+      }
+      setActiveCategory('all');
+      if (searchInput) {
+        searchInput.focus();
+      }
+    }
+
+    // Input event
     if (searchInput) {
       searchInput.addEventListener('input', filterPosts);
+
+      // Keyboard Esc to clear search
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          if (searchInput.value) {
+            searchInput.value = '';
+            filterPosts();
+          }
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+        }
+      });
     }
 
-    categoryChips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        categoryChips.forEach(c => c.classList.remove('is-active'));
-        chip.classList.add('is-active');
-        activeCategory = chip.getAttribute('data-blog-category') || 'all';
+    // Clear button
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        if (searchInput) {
+          searchInput.value = '';
+          searchInput.focus();
+        }
         filterPosts();
       });
+    }
+
+    // Category chips
+    categoryChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const cat = chip.getAttribute('data-blog-category') || 'all';
+        setActiveCategory(cat);
+      });
     });
+
+    // Reset button in empty state
+    if (resetBtn) {
+      resetBtn.addEventListener('click', resetAll);
+    }
+
+    // Suggested search chips
+    suggestedChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const term = chip.getAttribute('data-suggest') || chip.textContent.trim();
+        if (searchInput) {
+          searchInput.value = term;
+          setActiveCategory('all');
+          searchInput.focus();
+        }
+      });
+    });
+
+    // Initial filter run to set counter and state
+    filterPosts();
   }
+
 
   // --------------------------------------------------------------------------
   // 6. Spaces Filter (Capacity & Type)
